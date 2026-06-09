@@ -1,0 +1,25 @@
+---
+/** Standard-Sektion: vertikaler Rhythmus (120px Desktop), zentrierter Stage-Container. */
+interface Props {
+  id?: string;
+  class?: string;
+  containerClass?: string;
+  'aria-labelledby'?: string;
+}
+const {
+  id,
+  class: className = '',
+  containerClass = '',
+  'aria-labelledby': ariaLabelledby,
+} = Astro.props;
+---
+
+<section
+  id={id}
+  aria-labelledby={ariaLabelledby}
+  class:list={['scroll-mt-24 px-6 py-24 md:py-section', className]}
+>
+  <div class:list={['mx-auto w-full max-w-stage', containerClass]}>
+    <slot />
+  </div>
+</section>

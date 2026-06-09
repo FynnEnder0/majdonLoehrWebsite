@@ -1,0 +1,50 @@
+---
+import CurtainRule from '../ui/CurtainRule.astro';
+import { site } from '../../data/site';
+import { useTranslations, type Lang } from '../../i18n/utils';
+
+interface Props {
+  lang: Lang;
+}
+const { lang } = Astro.props;
+const t = useTranslations(lang);
+const year = new Date().getFullYear();
+---
+
+<footer class="border-t border-wing-shadow px-6 py-16">
+  <div class="mx-auto flex max-w-stage flex-col gap-10 md:flex-row md:items-end md:justify-between">
+    <div class="flex items-stretch gap-4">
+      <CurtainRule class="min-h-[3.5rem]" />
+      <div>
+        <p class="font-display text-2xl text-parchment">Majdon Loehr</p>
+        <p class="mt-1 font-mono text-xs uppercase tracking-[0.18em] text-dusk-label">
+          {t.footer.tagline}
+        </p>
+        <p class="mt-1 font-mono text-xs uppercase tracking-[0.18em] text-dusk-label">
+          {t.footer.basedIn}
+        </p>
+      </div>
+    </div>
+
+    <div class="flex flex-col gap-3 md:items-end">
+      <a
+        href={`mailto:${site.email}`}
+        class="font-mono text-xs uppercase tracking-[0.18em] text-warm-ash transition-colors hover:text-footlight"
+      >
+        {site.email}
+      </a>
+      <a
+        href="#top"
+        class="font-mono text-xs uppercase tracking-[0.18em] text-dusk-label transition-colors hover:text-footlight"
+      >
+        ↑ {t.footer.backToTop}
+      </a>
+    </div>
+  </div>
+
+  <div class="mx-auto mt-12 max-w-stage">
+    <p class="font-mono text-[0.65rem] uppercase tracking-[0.18em] text-warm-ash/50">
+      © {year} Majdon Loehr · {t.footer.rights}
+    </p>
+  </div>
+</footer>

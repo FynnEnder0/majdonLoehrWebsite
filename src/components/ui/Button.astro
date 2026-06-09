@@ -1,0 +1,42 @@
+---
+/**
+ * Button / CTA. Rendert als <a> (mit href) oder <button>.
+ * variant: 'primary' = gold gefüllt · 'secondary' = Unterstrich-Link mit Pfeil.
+ */
+interface Props {
+  href?: string;
+  variant?: 'primary' | 'secondary';
+  type?: 'button' | 'submit';
+  class?: string;
+  [key: string]: unknown;
+}
+const {
+  href,
+  variant = 'primary',
+  type = 'button',
+  class: className = '',
+  ...rest
+} = Astro.props;
+
+const base =
+  'inline-flex items-center gap-2 font-mono text-xs uppercase tracking-[0.18em] transition-colors duration-200';
+const variants = {
+  primary:
+    'justify-center min-h-[44px] px-7 bg-footlight text-stage-dark hover:bg-parchment focus-visible:bg-parchment',
+  secondary:
+    'min-h-[44px] text-warm-ash border-b border-footlight/40 hover:text-parchment hover:border-footlight',
+};
+const cls = [base, variants[variant], className].join(' ');
+---
+
+{
+  href ? (
+    <a href={href} class={cls} {...rest}>
+      <slot />
+    </a>
+  ) : (
+    <button type={type} class={cls} {...rest}>
+      <slot />
+    </button>
+  )
+}

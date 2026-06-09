@@ -1,0 +1,13 @@
+---
+/**
+ * Curtain Rule — 4px vertikaler Footlight-Gold-Balken.
+ * Signature-Element: markiert strukturelle Momente (Lichtspalt zwischen Bühnenvorhängen).
+ * Immer strukturell, nie dekorativ. Streckt sich über die Höhe des Flex-Eltern (items-stretch).
+ */
+interface Props {
+  class?: string;
+}
+const { class: className = '' } = Astro.props;
+---
+
+<span class:list={['block w-1 shrink-0 self-stretch bg-footlight', className]} aria-hidden="true"></span>

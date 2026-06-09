@@ -1,0 +1,18 @@
+---
+import CurtainRule from './CurtainRule.astro';
+
+/** Section-Überschrift: Playfair Display mit Curtain Rule. */
+interface Props {
+  text: string;
+  as?: 'h2' | 'h3';
+  class?: string;
+}
+const { text, as: Tag = 'h2', class: className = '' } = Astro.props;
+---
+
+<div class:list={['flex items-stretch gap-4', className]}>
+  <CurtainRule />
+  <Tag class="font-display text-3xl leading-tight text-parchment sm:text-4xl md:text-5xl">
+    {text}
+  </Tag>
+</div>

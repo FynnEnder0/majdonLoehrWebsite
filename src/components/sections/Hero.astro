@@ -1,0 +1,90 @@
+---
+import { Image } from 'astro:assets';
+import hero from '../../assets/hero.jpg';
+import Eyebrow from '../ui/Eyebrow.astro';
+import Button from '../ui/Button.astro';
+import { useTranslations, type Lang } from '../../i18n/utils';
+
+interface Props {
+  lang: Lang;
+}
+const { lang } = Astro.props;
+const t = useTranslations(lang);
+---
+
+<section
+  id="hero"
+  class="relative flex min-h-screen items-center overflow-hidden px-6 pb-20 pt-28"
+>
+  <!-- Hintergrundbild + Vorhang-Verlauf -->
+  <div class="absolute inset-0 -z-10">
+    <Image
+      src={hero}
+      alt={t.meta.ogAlt}
+      widths={[768, 1280, 1920]}
+      sizes="100vw"
+      loading="eager"
+      class="h-full w-full object-cover object-[72%_center]"
+    />
+    <div
+      class="absolute inset-0 bg-gradient-to-r from-stage-dark via-stage-dark/85 to-stage-dark/20"
+    >
+    </div>
+    <div
+      class="absolute inset-0 bg-gradient-to-t from-stage-dark via-transparent to-stage-dark/40"
+    >
+    </div>
+  </div>
+
+  <div class="mx-auto w-full max-w-stage">
+    <div class="max-w-2xl">
+      <Eyebrow text={t.hero.eyebrow} />
+
+      <h1 class="mt-6 font-display leading-[0.92]">
+        <span class="block text-6xl text-parchment sm:text-7xl md:text-8xl">
+          {t.hero.nameFirst}
+        </span>
+        <span class="block text-6xl text-footlight sm:text-7xl md:text-8xl">
+          {t.hero.nameLast}
+        </span>
+      </h1>
+
+      <p class="mt-6 font-body text-2xl italic text-warm-ash md:text-3xl">
+        {t.hero.tagline}
+      </p>
+
+      <div class="mt-10 grid gap-8 sm:grid-cols-[1fr_auto] sm:items-end">
+        <p class="max-w-prose-col font-body text-xl leading-relaxed text-warm-ash">
+          {t.hero.bio}
+        </p>
+        <div class="sm:text-right">
+          <p class="font-mono text-xs uppercase tracking-[0.18em] text-dusk-label">
+            {t.hero.engagementsLabel}
+          </p>
+          <ul class="mt-2 space-y-1">
+            {
+              t.hero.engagements.map((e) => (
+                <li class="font-mono text-sm text-warm-ash">{e}</li>
+              ))
+            }
+          </ul>
+        </div>
+      </div>
+
+      <div class="mt-10 flex flex-wrap items-center gap-x-8 gap-y-4">
+        <Button href="#work" variant="primary">{t.hero.ctaPrimary}</Button>
+        <Button href="#contact" variant="secondary">
+          {t.hero.ctaSecondary} →
+        </Button>
+      </div>
+    </div>
+  </div>
+
+  <a
+    href="#about"
+    class="group absolute bottom-8 left-6 flex items-center gap-3 font-mono text-[0.65rem] uppercase tracking-[0.2em] text-dusk-label transition-colors hover:text-footlight sm:left-1/2 sm:-translate-x-1/2"
+  >
+    <span>{t.hero.scrollHint}</span>
+    <span class="inline-block h-8 w-px bg-footlight/50 transition-colors group-hover:bg-footlight"></span>
+  </a>
+</section>

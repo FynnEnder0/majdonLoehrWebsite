@@ -1,0 +1,106 @@
+---
+import '../styles/global.css';
+import Nav from '../components/layout/Nav.tsx';
+import Footer from '../components/layout/Footer.astro';
+import { site } from '../data/site';
+import { personJsonLd } from '../lib/seo';
+import { useTranslations, getAltLang, type Lang } from '../i18n/utils';
+
+interface Props {
+  lang: Lang;
+  title?: string;
+  description?: string;
+}
+
+const { lang } = Astro.props;
+const t = useTranslations(lang);
+const title = Astro.props.title ?? t.meta.title;
+const description = Astro.props.description ?? t.meta.description;
+
+// Pfad ohne Locale-Prefix (One-Page → meist '')
+const path = Astro.url.pathname.replace(/^\/(de|en)/, '');
+const canonical = new URL(Astro.url.pathname, site.url).href;
+const deHref = new URL(`/de${path}`, site.url).href;
+const enHref = new URL(`/en${path}`, site.url).href;
+const ogImage = `${site.url}/og.jpg`;
+
+const altLang = getAltLang(lang);
+const altHref = `/${altLang}${path}`;
+const altLabel = altLang.toUpperCase();
+
+const jsonLd = personJsonLd(lang);
+---
+
+<!doctype html>
+<html lang={lang} class="scroll-smooth">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="alternate icon" href="/favicon.ico" />
+
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <link rel="canonical" href={canonical} />
+
+    <!-- hreflang -->
+    <link rel="alternate" hreflang="de" href={deHref} />
+    <link rel="alternate" hreflang="en" href={enHref} />
+    <link rel="alternate" hreflang="x-default" href={deHref} />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Majdon Loehr" />
+    <meta property="og:locale" content={lang === 'de' ? 'de_DE' : 'en_US'} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonical} />
+    <meta property="og:image" content={ogImage} />
+    <meta property="og:image:alt" content={t.meta.ogAlt} />
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={ogImage} />
+
+    <meta name="theme-color" content="#1A0F08" />
+    <meta name="author" content="Majdon Loehr" />
+
+    <link rel="sitemap" href="/sitemap-index.xml" />
+
+    <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} is:inline />
+  </head>
+
+  <body class="min-h-screen antialiased">
+    <a
+      href="#main"
+      class="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[60] focus:bg-footlight focus:px-4 focus:py-2 focus:font-mono focus:text-xs focus:uppercase focus:tracking-[0.18em] focus:text-stage-dark"
+    >
+      {t.nav.toContent}
+    </a>
+
+    <span id="top" aria-hidden="true"></span>
+
+    <Nav
+      client:load
+      labels={{
+        about: t.nav.about,
+        work: t.nav.work,
+        press: t.nav.press,
+        gallery: t.nav.gallery,
+        contact: t.nav.contact,
+        menu: t.nav.menu,
+        close: t.nav.close,
+      }}
+      altHref={altHref}
+      altLabel={altLabel}
+    />
+
+    <main id="main">
+      <slot />
+    </main>
+
+    <Footer lang={lang} />
+  </body>
+</html>

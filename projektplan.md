@@ -97,10 +97,16 @@ Eine moderne, persönliche Website für Majdon Loehr — Schauspielerin mit Schw
 
 ## Tech Stack
 
-- **Framework:** Next.js (SEO, schnell, Vercel-Deployment)
-- **Styling:** Tailwind CSS
+> Aktualisiert 09.06.2026: Umsetzung als **statische Astro-Site auf GitHub Pages** (Domain `majdonloehr.de` bei IONOS). Ersetzt die ursprüngliche Next.js/Vercel-Annahme, da GitHub Pages keinen Node-Server zur Laufzeit bietet.
+
+- **Framework:** Astro (statischer Output, eingebautes i18n & SEO)
+- **Styling:** Tailwind CSS v4 (Designtokens als Theme)
+- **Interaktivität:** React-Islands (Nav, Galerie, Kontaktformular)
 - **Animation:** Framer Motion
-- **CMS:** Optional — Sanity oder Contentful (damit Majdon Credits selbst pflegen kann)
+- **Sprachen:** Astro-i18n, DE + EN vollständig (Routing, Sprachumschalter, `hreflang`)
+- **CMS:** Keins — Inhalte typsicher im Repo (`src/i18n/ui.ts`, `src/data/*`), später migrierbar
+- **Kontaktformular:** Drittanbieter (Formspree/Web3Forms), kein eigenes Backend
+- **Deployment:** GitHub Pages via GitHub Actions
 - **Build:** Claude Code (vollständig)
 
 ---

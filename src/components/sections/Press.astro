@@ -1,0 +1,56 @@
+---
+import Section from '../ui/Section.astro';
+import Eyebrow from '../ui/Eyebrow.astro';
+import SectionHeading from '../ui/SectionHeading.astro';
+import CurtainRule from '../ui/CurtainRule.astro';
+import MotionReveal from '../ui/MotionReveal.tsx';
+import { press } from '../../data/press';
+import { useTranslations, type Lang } from '../../i18n/utils';
+
+interface Props {
+  lang: Lang;
+}
+const { lang } = Astro.props;
+const t = useTranslations(lang);
+---
+
+<Section id="press" class="bg-stage-dark" aria-labelledby="press-heading">
+  <MotionReveal client:visible>
+    <Eyebrow text={t.press.eyebrow} />
+    <div id="press-heading">
+      <SectionHeading text={t.press.heading} class="mt-5" />
+    </div>
+  </MotionReveal>
+
+  <div class="mt-14 space-y-16">
+    {
+      press.map((p, i) => (
+        <MotionReveal client:visible delay={Math.min(i * 0.1, 0.3)}>
+          <figure class="flex items-stretch gap-5 md:gap-8">
+            <CurtainRule class="min-h-full" />
+            <div>
+              <blockquote class="font-display text-2xl italic leading-snug text-parchment sm:text-3xl md:text-4xl">
+                {p.quote[lang]}
+              </blockquote>
+              <figcaption class="mt-5 flex flex-wrap items-center gap-4">
+                <span class="font-mono text-xs uppercase tracking-[0.18em] text-dusk-label">
+                  — {p.source}
+                </span>
+                {p.url && (
+                  <a
+                    href={p.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="font-mono text-xs uppercase tracking-[0.18em] text-footlight transition-colors hover:text-parchment"
+                  >
+                    {t.press.readMore} →
+                  </a>
+                )}
+              </figcaption>
+            </div>
+          </figure>
+        </MotionReveal>
+      ))
+    }
+  </div>
+</Section>

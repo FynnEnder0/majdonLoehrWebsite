@@ -1,0 +1,84 @@
+@import "tailwindcss";
+
+/* Self-hosted fonts (siehe Plan: Playfair Display + Cormorant Garamond) */
+@import "@fontsource/playfair-display/400.css";
+@import "@fontsource/playfair-display/400-italic.css";
+@import "@fontsource/cormorant-garamond/300.css";
+@import "@fontsource/cormorant-garamond/400.css";
+
+/* ---------------------------------------------------------------------------
+   Design System — „Die Bühne, der Mensch"
+   Farbpalette, Typografie, Layout-Token aus projektplan.md
+--------------------------------------------------------------------------- */
+@theme {
+  /* Farben */
+  --color-stage-dark: #1a0f08; /* Hintergrund */
+  --color-wing-shadow: #2e1c0e; /* Trennlinien, dezente Flächen */
+  --color-footlight: #c2842a; /* Akzent, Curtain Rule, CTAs */
+  --color-warm-ash: #c4ae92; /* Nav-Links, Fließtext, Bio */
+  --color-parchment: #f0e6d3; /* Headings, Name */
+  --color-dusk-label: #bfa07a; /* Eyebrow-Labels, Metadaten */
+
+  /* Typografie */
+  --font-display: "Playfair Display", Georgia, serif;
+  --font-body: "Cormorant Garamond", Georgia, serif;
+  --font-mono: "Courier New", Courier, monospace;
+
+  /* Layout */
+  --container-stage: 1100px; /* max-w-stage */
+  --container-prose-col: 680px; /* max-w-prose-col */
+  --spacing-section: 120px; /* py-section etc. */
+}
+
+/* ---------------------------------------------------------------------------
+   Basis
+--------------------------------------------------------------------------- */
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 6rem; /* Platz für fixe Nav bei Anchor-Sprüngen */
+    -webkit-text-size-adjust: 100%;
+  }
+
+  body {
+    background-color: var(--color-stage-dark);
+    color: var(--color-warm-ash);
+    font-family: var(--font-body);
+    font-weight: 300;
+    font-size: 1.25rem; /* Cormorant läuft klein → größere Basis */
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+
+  h1, h2, h3, h4 {
+    font-family: var(--font-display);
+    font-weight: 400;
+    color: var(--color-parchment);
+    line-height: 1.1;
+  }
+
+  ::selection {
+    background-color: var(--color-footlight);
+    color: var(--color-stage-dark);
+  }
+
+  /* Sichtbarer, markengerechter Fokusring (Accessibility) */
+  :focus-visible {
+    outline: 2px solid var(--color-footlight);
+    outline-offset: 3px;
+    border-radius: 1px;
+  }
+}
+
+/* Reduced Motion — alle Übergänge/Animationen entschärfen */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

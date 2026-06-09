@@ -1,0 +1,63 @@
+---
+import Section from '../ui/Section.astro';
+import Eyebrow from '../ui/Eyebrow.astro';
+import SectionHeading from '../ui/SectionHeading.astro';
+import MotionReveal from '../ui/MotionReveal.tsx';
+import ContactForm from './ContactForm.tsx';
+import { site } from '../../data/site';
+import { useTranslations, type Lang } from '../../i18n/utils';
+
+interface Props {
+  lang: Lang;
+}
+const { lang } = Astro.props;
+const t = useTranslations(lang);
+---
+
+<Section id="contact" class="bg-stage-dark" aria-labelledby="contact-heading">
+  <div class="grid gap-14 lg:grid-cols-[20rem_minmax(0,1fr)] lg:gap-20">
+    <MotionReveal client:visible>
+      <div>
+        <Eyebrow text={t.contact.eyebrow} />
+        <div id="contact-heading">
+          <SectionHeading text={t.contact.heading} class="mt-5" />
+        </div>
+        <p class="mt-6 max-w-prose-col font-body text-xl leading-relaxed text-warm-ash">
+          {t.contact.intro}
+        </p>
+        <p class="mt-8 font-mono text-xs uppercase tracking-[0.18em] text-dusk-label">
+          {t.contact.directEmail}
+        </p>
+        <a
+          href={`mailto:${site.email}`}
+          class="font-mono text-sm tracking-[0.08em] text-footlight transition-colors hover:text-parchment"
+        >
+          {site.email}
+        </a>
+      </div>
+    </MotionReveal>
+
+    <div>
+      <ContactForm
+        client:visible
+        endpoint={site.formEndpoint}
+        accessKey={site.formAccessKey}
+        email={site.email}
+        labels={{
+          nameLabel: t.contact.nameLabel,
+          emailLabel: t.contact.emailLabel,
+          messageLabel: t.contact.messageLabel,
+          namePlaceholder: t.contact.namePlaceholder,
+          emailPlaceholder: t.contact.emailPlaceholder,
+          messagePlaceholder: t.contact.messagePlaceholder,
+          submit: t.contact.submit,
+          sending: t.contact.sending,
+          success: t.contact.success,
+          error: t.contact.error,
+          required: t.contact.required,
+          invalidEmail: t.contact.invalidEmail,
+        }}
+      />
+    </div>
+  </div>
+</Section>

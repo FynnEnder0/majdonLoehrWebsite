@@ -1,0 +1,15 @@
+---
+import CurtainRule from './CurtainRule.astro';
+
+/** Eyebrow-Label: Courier-Mono, uppercase, mit Curtain Rule. */
+interface Props {
+  text: string;
+  class?: string;
+}
+const { text, class: className = '' } = Astro.props;
+---
+
+<p class:list={['flex items-stretch gap-3', className]}>
+  <CurtainRule class="min-h-[1.1em]" />
+  <span class="font-mono text-xs uppercase tracking-[0.22em] text-dusk-label">{text}</span>
+</p>

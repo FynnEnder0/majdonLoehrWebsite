@@ -1,0 +1,66 @@
+---
+import Section from '../ui/Section.astro';
+import Eyebrow from '../ui/Eyebrow.astro';
+import SectionHeading from '../ui/SectionHeading.astro';
+import CurtainRule from '../ui/CurtainRule.astro';
+import MotionReveal from '../ui/MotionReveal.tsx';
+import { credits } from '../../data/credits';
+import { useTranslations, type Lang } from '../../i18n/utils';
+
+interface Props {
+  lang: Lang;
+}
+const { lang } = Astro.props;
+const t = useTranslations(lang);
+---
+
+<Section id="work" class="bg-wing-shadow/30" aria-labelledby="work-heading">
+  <MotionReveal client:visible>
+    <Eyebrow text={t.work.eyebrow} />
+    <div id="work-heading">
+      <SectionHeading text={t.work.heading} class="mt-5" />
+    </div>
+    <p class="mt-6 max-w-prose-col font-body text-xl text-warm-ash">
+      {t.work.intro}
+    </p>
+  </MotionReveal>
+
+  <ul class="mt-12 divide-y divide-wing-shadow border-t border-wing-shadow">
+    {
+      credits.map((c, i) => (
+        <li>
+          <MotionReveal client:visible delay={Math.min(i * 0.08, 0.4)}>
+            <article
+              class:list={[
+                'group grid grid-cols-1 gap-2 py-6 sm:grid-cols-[5rem_1fr_auto] sm:items-baseline sm:gap-6',
+                c.featured && 'sm:pl-0',
+              ]}
+            >
+              <span class="font-mono text-sm tracking-[0.12em] text-footlight">
+                {c.year}
+              </span>
+              <div class="flex items-stretch gap-3">
+                {c.featured && <CurtainRule class="min-h-full" />}
+                <div>
+                  <h3 class="font-display text-2xl text-parchment md:text-3xl">
+                    {c.production[lang]}
+                  </h3>
+                  <p class="mt-1 font-body text-lg italic text-warm-ash">
+                    {t.work.columns.role}: {c.role[lang]}
+                  </p>
+                </div>
+              </div>
+              <span class="font-mono text-xs uppercase tracking-[0.12em] text-dusk-label sm:text-right">
+                {c.venue[lang]}
+              </span>
+            </article>
+          </MotionReveal>
+        </li>
+      ))
+    }
+  </ul>
+
+  <p class="mt-8 font-mono text-xs uppercase tracking-[0.16em] text-warm-ash/50">
+    {t.work.placeholderNote}
+  </p>
+</Section>
