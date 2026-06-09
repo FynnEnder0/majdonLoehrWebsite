@@ -81,7 +81,7 @@ export default function GalleryClient({
               role="tab"
               aria-selected={selected}
               onClick={() => setFilter(key)}
-              className={`min-h-[44px] border-b px-1 font-mono text-xs uppercase tracking-[0.18em] transition-colors ${
+              className={`min-h-[44px] border-b px-1 font-mono text-sm font-bold uppercase tracking-[0.15em] transition-colors ${
                 selected
                   ? 'border-footlight text-footlight'
                   : 'border-transparent text-warm-ash hover:text-parchment'

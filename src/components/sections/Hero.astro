@@ -21,17 +21,19 @@ const t = useTranslations(lang);
     <Image
       src={hero}
       alt={t.meta.ogAlt}
-      widths={[768, 1280, 1920]}
+      widths={[1024, 1600, 2200, 2880, 3600]}
       sizes="100vw"
+      quality={82}
       loading="eager"
-      class="h-full w-full object-cover object-[72%_center]"
+      class="h-full w-full object-cover object-[72%_center] brightness-110"
     />
+    <!-- Vorhang-Verlauf: links abdunkeln für Text, rechts Bild frei -->
     <div
-      class="absolute inset-0 bg-gradient-to-r from-stage-dark via-stage-dark/85 to-stage-dark/20"
+      class="absolute inset-0 bg-gradient-to-r from-stage-dark from-5% via-stage-dark/55 via-45% to-transparent to-80%"
     >
     </div>
     <div
-      class="absolute inset-0 bg-gradient-to-t from-stage-dark via-transparent to-stage-dark/40"
+      class="absolute inset-0 bg-gradient-to-t from-stage-dark/70 via-transparent to-transparent"
     >
     </div>
   </div>
@@ -58,13 +60,13 @@ const t = useTranslations(lang);
           {t.hero.bio}
         </p>
         <div class="sm:text-right">
-          <p class="font-mono text-xs uppercase tracking-[0.18em] text-dusk-label">
+          <p class="font-mono text-sm font-bold uppercase tracking-[0.16em] text-dusk-label">
             {t.hero.engagementsLabel}
           </p>
           <ul class="mt-2 space-y-1">
             {
               t.hero.engagements.map((e) => (
-                <li class="font-mono text-sm text-warm-ash">{e}</li>
+                <li class="font-mono text-base text-warm-ash">{e}</li>
               ))
             }
           </ul>

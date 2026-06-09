@@ -17,10 +17,10 @@ const year = new Date().getFullYear();
       <CurtainRule class="min-h-[3.5rem]" />
       <div>
         <p class="font-display text-2xl text-parchment">Majdon Loehr</p>
-        <p class="mt-1 font-mono text-xs uppercase tracking-[0.18em] text-dusk-label">
+        <p class="mt-1 font-mono text-sm uppercase tracking-[0.15em] text-dusk-label">
           {t.footer.tagline}
         </p>
-        <p class="mt-1 font-mono text-xs uppercase tracking-[0.18em] text-dusk-label">
+        <p class="mt-1 font-mono text-sm uppercase tracking-[0.15em] text-dusk-label">
           {t.footer.basedIn}
         </p>
       </div>
@@ -29,13 +29,13 @@ const year = new Date().getFullYear();
     <div class="flex flex-col gap-3 md:items-end">
       <a
         href={`mailto:${site.email}`}
-        class="font-mono text-xs uppercase tracking-[0.18em] text-warm-ash transition-colors hover:text-footlight"
+        class="font-mono text-sm uppercase tracking-[0.15em] text-warm-ash transition-colors hover:text-footlight"
       >
         {site.email}
       </a>
       <a
         href="#top"
-        class="font-mono text-xs uppercase tracking-[0.18em] text-dusk-label transition-colors hover:text-footlight"
+        class="font-mono text-sm uppercase tracking-[0.15em] text-dusk-label transition-colors hover:text-footlight"
       >
         ↑ {t.footer.backToTop}
       </a>
@@ -43,7 +43,7 @@ const year = new Date().getFullYear();
   </div>
 
   <div class="mx-auto mt-12 max-w-stage">
-    <p class="font-mono text-[0.65rem] uppercase tracking-[0.18em] text-warm-ash/50">
+    <p class="font-mono text-xs uppercase tracking-[0.15em] text-warm-ash/60">
       © {year} Majdon Loehr · {t.footer.rights}
     </p>
   </div>

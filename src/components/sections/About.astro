@@ -40,17 +40,17 @@ const t = useTranslations(lang);
         <div class="flex items-stretch gap-4">
           <CurtainRule class="min-h-full" />
           <div class="w-full">
-            <h3 class="font-mono text-xs uppercase tracking-[0.2em] text-dusk-label">
+            <h3 class="font-mono text-sm font-bold uppercase tracking-[0.2em] text-dusk-label">
               {lang === 'de' ? 'Steckbrief' : 'Profile'}
             </h3>
-            <dl class="mt-4 space-y-2">
+            <dl class="mt-4 space-y-2.5">
               {
                 castingFacts.map((f) => (
-                  <div class="flex justify-between gap-4 border-b border-wing-shadow pb-2 text-sm">
-                    <dt class="font-mono uppercase tracking-[0.12em] text-dusk-label">
+                  <div class="flex justify-between gap-4 border-b border-wing-shadow pb-2.5">
+                    <dt class="font-mono text-sm uppercase tracking-[0.08em] text-dusk-label">
                       {f.label[lang]}
                     </dt>
-                    <dd class="text-right text-warm-ash">{f.value[lang]}</dd>
+                    <dd class="text-right text-lg font-medium text-warm-ash">{f.value[lang]}</dd>
                   </div>
                 ))
               }
@@ -61,17 +61,17 @@ const t = useTranslations(lang);
         <div class="flex items-stretch gap-4">
           <CurtainRule class="min-h-full" />
           <div>
-            <h3 class="font-mono text-xs uppercase tracking-[0.2em] text-dusk-label">
+            <h3 class="font-mono text-sm font-bold uppercase tracking-[0.2em] text-dusk-label">
               {lang === 'de' ? 'Besondere Fähigkeiten' : 'Special Skills'}
             </h3>
             <div class="mt-4 space-y-5">
               {
                 skillGroups.map((group) => (
                   <div>
-                    <p class="font-body text-lg text-parchment">{group.title[lang]}</p>
+                    <p class="font-body text-xl font-semibold text-parchment">{group.title[lang]}</p>
                     <ul class="mt-1 flex flex-wrap gap-x-3 gap-y-1">
                       {group.items.map((item, i) => (
-                        <li class="font-body text-base text-warm-ash">
+                        <li class="font-body text-lg text-warm-ash">
                           {item[lang]}
                           {i < group.items.length - 1 && (
                             <span class="ml-3 text-footlight/60">·</span>

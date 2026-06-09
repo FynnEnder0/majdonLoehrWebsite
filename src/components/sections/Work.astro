@@ -36,7 +36,7 @@ const t = useTranslations(lang);
                 c.featured && 'sm:pl-0',
               ]}
             >
-              <span class="font-mono text-sm tracking-[0.12em] text-footlight">
+              <span class="font-mono text-base font-bold tracking-[0.12em] text-footlight">
                 {c.year}
               </span>
               <div class="flex items-stretch gap-3">
@@ -45,12 +45,12 @@ const t = useTranslations(lang);
                   <h3 class="font-display text-2xl text-parchment md:text-3xl">
                     {c.production[lang]}
                   </h3>
-                  <p class="mt-1 font-body text-lg italic text-warm-ash">
+                  <p class="mt-1 font-body text-xl italic text-warm-ash">
                     {t.work.columns.role}: {c.role[lang]}
                   </p>
                 </div>
               </div>
-              <span class="font-mono text-xs uppercase tracking-[0.12em] text-dusk-label sm:text-right">
+              <span class="font-mono text-sm uppercase tracking-[0.1em] text-dusk-label sm:text-right">
                 {c.venue[lang]}
               </span>
             </article>

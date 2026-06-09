@@ -106,7 +106,7 @@ export default function ContactForm({ labels, endpoint, accessKey, email }: Prop
   const fieldClass =
     'mt-2 w-full border border-wing-shadow bg-stage-dark/60 px-4 py-3 font-body text-lg text-parchment placeholder:text-warm-ash/40 focus:border-footlight focus:outline-none';
   const labelClass =
-    'font-mono text-xs uppercase tracking-[0.18em] text-dusk-label';
+    'font-mono text-sm font-bold uppercase tracking-[0.16em] text-dusk-label';
   const errClass = 'mt-1 font-mono text-xs text-footlight';
 
   return (

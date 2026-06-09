@@ -5,6 +5,8 @@
 @import "@fontsource/playfair-display/400-italic.css";
 @import "@fontsource/cormorant-garamond/300.css";
 @import "@fontsource/cormorant-garamond/400.css";
+@import "@fontsource/cormorant-garamond/500.css";
+@import "@fontsource/cormorant-garamond/600.css";
 
 /* ---------------------------------------------------------------------------
    Design System — „Die Bühne, der Mensch"
@@ -15,7 +17,7 @@
   --color-stage-dark: #1a0f08; /* Hintergrund */
   --color-wing-shadow: #2e1c0e; /* Trennlinien, dezente Flächen */
   --color-footlight: #c2842a; /* Akzent, Curtain Rule, CTAs */
-  --color-warm-ash: #c4ae92; /* Nav-Links, Fließtext, Bio */
+  --color-warm-ash: #d8c4a6; /* Nav-Links, Fließtext, Bio — aufgehellt für mehr Kontrast */
   --color-parchment: #f0e6d3; /* Headings, Name */
   --color-dusk-label: #bfa07a; /* Eyebrow-Labels, Metadaten */
 
@@ -44,9 +46,10 @@
     background-color: var(--color-stage-dark);
     color: var(--color-warm-ash);
     font-family: var(--font-body);
-    font-weight: 300;
-    font-size: 1.25rem; /* Cormorant läuft klein → größere Basis */
-    line-height: 1.6;
+    font-weight: 400; /* 300 war zu dünn → 400 für bessere Lesbarkeit */
+    font-size: 1.3rem; /* Cormorant läuft klein → größere Basis */
+    line-height: 1.65;
+    letter-spacing: 0.01em;
     -webkit-font-smoothing: antialiased;
     text-rendering: optimizeLegibility;
   }

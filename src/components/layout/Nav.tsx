@@ -74,7 +74,7 @@ export default function Nav({ labels, altHref, altLabel }: Props) {
               <li key={href}>
                 <a
                   href={href}
-                  className="font-mono text-xs uppercase tracking-[0.18em] text-warm-ash transition-colors hover:text-parchment"
+                  className="font-mono text-sm uppercase tracking-[0.15em] text-warm-ash transition-colors hover:text-parchment"
                 >
                   {label}
                 </a>
@@ -83,7 +83,7 @@ export default function Nav({ labels, altHref, altLabel }: Props) {
           </ul>
           <a
             href={altHref}
-            className="font-mono text-xs uppercase tracking-[0.18em] text-dusk-label transition-colors hover:text-footlight"
+            className="font-mono text-sm font-bold uppercase tracking-[0.15em] text-dusk-label transition-colors hover:text-footlight"
             hrefLang={altLabel.toLowerCase()}
           >
             {altLabel}
