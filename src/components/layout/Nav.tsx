@@ -62,7 +62,7 @@ export default function Nav({ labels, altHref, altLabel }: Props) {
         <a
           href="#top"
           className="font-display text-lg tracking-wide text-parchment"
-          aria-label="Majdon Loehr — Start"
+          aria-label="Majdon Löhr — Start"
         >
           M&nbsp;·&nbsp;L
         </a>

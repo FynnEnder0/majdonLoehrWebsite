@@ -38,8 +38,8 @@ export const gallery: GalleryImage[] = Object.entries(images)
       : 'portrait';
     const alt =
       category === 'stage'
-        ? { de: 'Majdon Loehr in einer Bühnenproduktion', en: 'Majdon Loehr in a stage production' }
-        : { de: 'Porträtaufnahme von Majdon Loehr', en: 'Portrait photograph of Majdon Loehr' };
+        ? { de: 'Majdon Löhr in einer Bühnenproduktion', en: 'Majdon Löhr in a stage production' }
+        : { de: 'Porträtaufnahme von Majdon Löhr', en: 'Portrait photograph of Majdon Löhr' };
     return { src: mod.default, category, alt };
   })
   // Porträts zuerst, dann Bühne

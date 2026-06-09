@@ -15,10 +15,10 @@ export const defaultLang: Lang = 'de';
 export const ui = {
   de: {
     meta: {
-      title: 'Majdon Loehr — Schauspielerin · Bühne & Theater',
+      title: 'Majdon Löhr — Schauspielerin · Bühne & Theater',
       description:
-        'Majdon Loehr ist Schauspielerin mit Schwerpunkt Bühne und Sprechtheater — komödiantische Stärke, starke Stimme, Bühnenenergie. Engagements in Hannover, Braunschweig und freien Produktionen. Casting- & Buchungsanfragen willkommen.',
-      ogAlt: 'Porträt von Majdon Loehr',
+        'Majdon Löhr ist Schauspielerin mit Schwerpunkt Bühne und Sprechtheater — komödiantische Stärke, starke Stimme, Bühnenenergie. Engagements in Hannover, Braunschweig und freien Produktionen. Casting- & Buchungsanfragen willkommen.',
+      ogAlt: 'Porträt von Majdon Löhr',
     },
     nav: {
       about: 'Über mich',
@@ -33,7 +33,7 @@ export const ui = {
     hero: {
       eyebrow: 'Schauspielerin · Bühne · Theater',
       nameFirst: 'Majdon',
-      nameLast: 'Loehr',
+      nameLast: 'Löhr',
       tagline: 'Auf der Bühne zuhause — ab dem ersten Schritt.',
       bio: 'Ausgebildet an der Freien Schauspielschule Hamburg, zuhause im Sprechtheater. Meine Stärke ist die Komödie — getragen von einer kräftigen Stimme und einer Bühnenenergie, die das Publikum mitnimmt.',
       engagementsLabel: 'Engagements',
@@ -46,7 +46,7 @@ export const ui = {
       eyebrow: 'Über mich',
       heading: 'Der Mensch hinter der Rolle',
       body: [
-        'Ich bin Majdon Loehr — Schauspielerin am Beginn meines Wegs, mit der Bühne als künstlerischer Heimat. 2025 habe ich meine Ausbildung an der Freien Schauspielschule Hamburg abgeschlossen und in rund fünfzig bis sechzig Auftritten gelernt, was ein Raum, ein Licht und ein Publikum aus einem Text machen können.',
+        'Ich bin Majdon Löhr — Schauspielerin am Beginn meines Wegs, mit der Bühne als künstlerischer Heimat. 2025 habe ich meine Ausbildung an der Freien Schauspielschule Hamburg abgeschlossen und in rund fünfzig bis sechzig Auftritten gelernt, was ein Raum, ein Licht und ein Publikum aus einem Text machen können.',
         'Mein Zuhause ist das Sprechtheater, meine größte Freude die Komödie: das präzise Timing, der Mut zur Übertreibung, der Moment, in dem ein Saal gemeinsam lacht. Dazu kommt eine Stimme, die trägt — ob im Spiel, im Gesang oder vor dem Mikrofon beim Synchronsprechen.',
         'Ich pendle zwischen Braunschweig und Hamburg, bin neugierig auf neue Rollen, Ensembles und Handschriften — und bereit für den nächsten Schritt.',
       ],
@@ -105,10 +105,10 @@ export const ui = {
 
   en: {
     meta: {
-      title: 'Majdon Loehr — Actress · Stage & Theatre',
+      title: 'Majdon Löhr — Actress · Stage & Theatre',
       description:
-        'Majdon Loehr is an actress focused on stage and spoken theatre — comedic strength, a powerful voice and real stage energy. Engagements in Hannover, Braunschweig and independent productions. Casting & booking enquiries welcome.',
-      ogAlt: 'Portrait of Majdon Loehr',
+        'Majdon Löhr is an actress focused on stage and spoken theatre — comedic strength, a powerful voice and real stage energy. Engagements in Hannover, Braunschweig and independent productions. Casting & booking enquiries welcome.',
+      ogAlt: 'Portrait of Majdon Löhr',
     },
     nav: {
       about: 'About',
@@ -123,7 +123,7 @@ export const ui = {
     hero: {
       eyebrow: 'Actress · Stage · Theatre',
       nameFirst: 'Majdon',
-      nameLast: 'Loehr',
+      nameLast: 'Löhr',
       tagline: 'At home on stage — from the very first step.',
       bio: 'Trained at the Freie Schauspielschule Hamburg and at home in spoken theatre. My strength is comedy — carried by a powerful voice and a stage energy that takes the audience along.',
       engagementsLabel: 'Engagements',
@@ -136,7 +136,7 @@ export const ui = {
       eyebrow: 'About',
       heading: 'The person behind the role',
       body: [
-        'I’m Majdon Loehr — an actress at the start of her journey, with the stage as her artistic home. In 2025 I completed my training at the Freie Schauspielschule Hamburg, and across some fifty to sixty performances I learned what a room, a light and an audience can make of a text.',
+        'I’m Majdon Löhr — an actress at the start of her journey, with the stage as her artistic home. In 2025 I completed my training at the Freie Schauspielschule Hamburg, and across some fifty to sixty performances I learned what a room, a light and an audience can make of a text.',
         'Spoken theatre is my home; comedy is my greatest joy: the precise timing, the courage to go big, the moment a whole room laughs together. Add to that a voice that carries — in performance, in song, or at the microphone for voice work.',
         'I move between Braunschweig and Hamburg, curious about new roles, ensembles and signatures — and ready for the next step.',
       ],

@@ -6,7 +6,8 @@ export function personJsonLd(lang: Lang) {
   return {
     '@context': 'https://schema.org',
     '@type': 'Person',
-    name: 'Majdon Loehr',
+    name: 'Majdon Löhr',
+    alternateName: 'Majdon Loehr',
     url: site.url,
     jobTitle: site.jobTitle[lang],
     image: `${site.url}/og.jpg`,

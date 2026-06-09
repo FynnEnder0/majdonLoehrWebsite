@@ -12,8 +12,8 @@ export type PressQuote = {
 export const press: PressQuote[] = [
   {
     quote: {
-      de: '„Platzhalter — hier steht ein prägnantes Pressezitat über Majdon Loehrs Bühnenpräsenz.“',
-      en: '“Placeholder — a striking press quote about Majdon Loehr’s stage presence goes here.”',
+      de: '„Platzhalter — hier steht ein prägnantes Pressezitat über Majdon Löhrs Bühnenpräsenz.“',
+      en: '“Placeholder — a striking press quote about Majdon Löhr’s stage presence goes here.”',
     },
     source: 'Quelle (TODO)',
   },

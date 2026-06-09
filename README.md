@@ -1,6 +1,6 @@
-# Majdon Loehr — Website
+# Majdon Löhr — Website
 
-Persönliche, zweisprachige Website (DE/EN) für die Schauspielerin Majdon Loehr.
+Persönliche, zweisprachige Website (DE/EN) für die Schauspielerin Majdon Löhr.
 Statisch gebaut mit **Astro**, deployed über **GitHub Pages** auf `majdonloehr.de`.
 
 Design & Konzept: siehe [projektplan.md](./projektplan.md).

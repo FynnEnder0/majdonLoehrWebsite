@@ -1,11 +1,11 @@
-# Majdon Loehr — Website Projektplan
+# Majdon Löhr — Website Projektplan
 > Zuletzt aktualisiert: 09.06.2026
 
 ---
 
 ## Projektziel
 
-Eine moderne, persönliche Website für Majdon Loehr — Schauspielerin mit Schwerpunkt Bühne und Theater. Die Website soll sie als Mensch und Künstlerin präsentieren, Casting-Anfragen ermöglichen und ihre Arbeit sichtbar machen.
+Eine moderne, persönliche Website für Majdon Löhr — Schauspielerin mit Schwerpunkt Bühne und Theater. Die Website soll sie als Mensch und Künstlerin präsentieren, Casting-Anfragen ermöglichen und ihre Arbeit sichtbar machen.
 
 **Drei Ziele gleichzeitig:**
 - Casting-/Buchungsanfragen generieren
@@ -175,7 +175,7 @@ Ein **4px vertikaler Balken in Footlight-Gold** (#C2842A) markiert jeden struktu
 - Dunkler Hintergrund (#1A0F08)
 - Nav: Logo „M · L" links, 5 Links rechts in Courier Mono
 - Eyebrow mit Curtain Rule: „Schauspielerin · Bühne · Theater"
-- Name zweizeilig: „Majdon" (Parchment) / „Loehr" (Footlight Gold)
+- Name zweizeilig: „Majdon" (Parchment) / „Löhr" (Footlight Gold)
 - Tagline kursiv: „Auf der Bühne zuhause — ab dem ersten Schritt."
 - Bio-Text links, Engagements-Liste rechts
 - Engagements: Hannover · Braunschweig · Gaststätten / Freie Produktionen

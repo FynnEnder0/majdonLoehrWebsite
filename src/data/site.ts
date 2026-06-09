@@ -3,7 +3,7 @@
  * Werte mit TODO bitte ersetzen, sobald final.
  */
 export const site = {
-  name: 'Majdon Loehr',
+  name: 'Majdon Löhr',
   url: 'https://majdonloehr.de',
   // TODO: echte Kontakt-E-Mail eintragen
   email: 'kontakt@majdonloehr.de',
