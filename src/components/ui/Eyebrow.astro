@@ -1,15 +1,19 @@
 ---
 import CurtainRule from './CurtainRule.astro';
 
-/** Eyebrow-Label: Courier-Mono, uppercase, mit Curtain Rule. */
+/** Eyebrow-Label: Courier-Mono, uppercase, mit Curtain Rule.
+ *  Optional `act` = römische Akt-Nummer (Playbill-Dramaturgie). */
 interface Props {
   text: string;
+  act?: string;
   class?: string;
 }
-const { text, class: className = '' } = Astro.props;
+const { text, act, class: className = '' } = Astro.props;
 ---
 
 <p class:list={['flex items-stretch gap-3', className]}>
   <CurtainRule class="min-h-[1.1em]" />
-  <span class="font-mono text-sm font-bold uppercase tracking-[0.2em] text-dusk-label">{text}</span>
+  <span class="font-mono text-sm font-bold uppercase tracking-[0.2em] text-dusk-label">
+    {act && <span class="text-footlight">{act}</span>}{act && <span class="mx-2 text-footlight/50">·</span>}{text}
+  </span>
 </p>
