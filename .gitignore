@@ -20,6 +20,12 @@ pnpm-debug.log*
 .env.production
 # (.env.example bleibt versioniert)
 
+# Große Videos / Master-Assets nicht ins Repo (GitHub-Limit 100 MB/Datei)
+BilderUndVideos/Videos/
+*.MOV
+*.mov
+*.mp4
+
 # macOS-specific files
 .DS_Store
 

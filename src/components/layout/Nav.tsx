@@ -69,7 +69,7 @@ export default function Nav({ labels, altHref, altLabel }: Props) {
 
         {/* Desktop-Links */}
         <div className="hidden items-center gap-8 md:flex">
-          <ul className="flex items-center gap-7">
+          <ul className="flex items-center gap-7 text-sm">
             {links.map(([href, label]) => (
               <li key={href}>
                 <a
