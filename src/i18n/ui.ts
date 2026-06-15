@@ -15,9 +15,9 @@ export const defaultLang: Lang = 'de';
 export const ui = {
   de: {
     meta: {
-      title: 'Majdon Löhr — Schauspielerin · Bühne & Theater',
+      title: 'Majdon Löhr · Schauspielerin · Bühne & Theater',
       description:
-        'Majdon Löhr ist Schauspielerin mit Schwerpunkt Bühne und Sprechtheater — komödiantische Stärke, starke Stimme, Bühnenenergie. Engagements in Hannover, Braunschweig und freien Produktionen. Casting- & Buchungsanfragen willkommen.',
+        'Majdon Löhr ist Schauspielerin mit Schwerpunkt Bühne und Sprechtheater. Komödiantische Stärke, starke Stimme, Bühnenenergie. Engagements in Hannover, Braunschweig und freien Produktionen. Casting- & Buchungsanfragen willkommen.',
       ogAlt: 'Porträt von Majdon Löhr',
     },
     nav: {
@@ -36,8 +36,8 @@ export const ui = {
       eyebrow: 'Schauspielerin · Bühne · Theater',
       nameFirst: 'Majdon',
       nameLast: 'Löhr',
-      tagline: 'Auf der Bühne zuhause — ab dem ersten Schritt.',
-      bio: 'Ausgebildet an der Freien Schauspielschule Hamburg, zuhause im Sprechtheater. Meine Stärke ist die Komödie — getragen von einer kräftigen Stimme und einer Bühnenenergie, die das Publikum mitnimmt.',
+      tagline: 'Auf der Bühne zuhause. Ab dem ersten Schritt.',
+      bio: 'Ausgebildet an der Freien Schauspielschule Hamburg, zuhause im Sprechtheater. Meine Stärke ist die Komödie, getragen von einer kräftigen Stimme und einer Bühnenenergie, die das Publikum mitnimmt.',
       engagementsLabel: 'Engagements',
       engagements: ['Hannover', 'Braunschweig', 'Freie Produktionen'],
       ctaPrimary: 'Zur Galerie',
@@ -48,12 +48,12 @@ export const ui = {
       eyebrow: 'Über mich',
       heading: 'Der Mensch hinter der Rolle',
       teaser:
-        'Schauspielerin mit der Bühne als Heimat — ausgebildet in Hamburg, zuhause in der Komödie, getragen von einer Stimme, die einen ganzen Saal mitnimmt.',
+        'Ich liebe Menschen, Tiere und den Moment, in dem ein ganzer Saal lacht. Auf der Bühne bin ich zuhause, in der Komödie erst recht.',
       cta: 'Mehr über mich',
       body: [
-        'Ich bin Majdon Löhr — Schauspielerin am Beginn meines Wegs, mit der Bühne als künstlerischer Heimat. 2025 habe ich meine Ausbildung an der Freien Schauspielschule Hamburg abgeschlossen und in rund fünfzig bis sechzig Auftritten gelernt, was ein Raum, ein Licht und ein Publikum aus einem Text machen können.',
-        'Mein Zuhause ist das Sprechtheater, meine größte Freude die Komödie: das präzise Timing, der Mut zur Übertreibung, der Moment, in dem ein Saal gemeinsam lacht. Dazu kommt eine Stimme, die trägt — ob im Spiel, im Gesang oder vor dem Mikrofon beim Synchronsprechen.',
-        'Ich pendle zwischen Braunschweig und Hamburg, bin neugierig auf neue Rollen, Ensembles und Handschriften — und bereit für den nächsten Schritt.',
+        'Ich bin Majdon Löhr, Schauspielerin und durch und durch ein Bühnenmensch. 2025 habe ich meine Ausbildung an der Freien Schauspielschule Hamburg abgeschlossen und in rund fünfzig bis sechzig Auftritten erlebt, was ein Raum, ein Licht und ein Publikum aus einem Text machen können.',
+        'Mein Zuhause ist das Sprechtheater, meine größte Freude die Komödie: das präzise Timing, der Mut zur Übertreibung, der Moment, in dem ein Saal gemeinsam lacht. Für einen guten Grusel bin ich ebenso zu haben. Dazu kommt eine Stimme, die trägt, ob im Spiel, im Gesang oder vorm Mikrofon.',
+        'Wenn ich nicht auf der Bühne stehe, bin ich am liebsten draußen in der Natur oder bei Tieren und den Menschen, die mir wichtig sind. Ich bin offen, aufgeschlossen und freue mich auf neue Rollen, Ensembles und Handschriften.',
       ],
     },
     work: {
@@ -74,7 +74,7 @@ export const ui = {
       eyebrow: 'Galerie',
       heading: 'Eindrücke',
       teaser:
-        'Ein Blick auf Shootings, Rollen und Privates — Momente aus Produktionen, Proben und dazwischen.',
+        'Ein Blick auf Shootings, Rollen und Privates. Momente aus Produktionen, Proben und dazwischen.',
       cta: 'Zur Galerie',
       filterAll: 'Alle',
       filterShootings: 'Shootings',
@@ -90,7 +90,7 @@ export const ui = {
       eyebrow: 'Kontakt',
       heading: 'Lassen Sie uns sprechen',
       intro:
-        'Casting, Buchung oder einfach ein Kennenlernen — schreiben Sie mir. Ich freue mich auf Ihre Nachricht.',
+        'Casting, Buchung oder einfach ein Kennenlernen: schreiben Sie mir. Ich freue mich auf Ihre Nachricht.',
       nameLabel: 'Name',
       emailLabel: 'E-Mail',
       messageLabel: 'Nachricht',
@@ -99,25 +99,25 @@ export const ui = {
       messagePlaceholder: 'Worum geht es?',
       submit: 'Nachricht senden',
       sending: 'Wird gesendet …',
-      success: 'Vielen Dank — Ihre Nachricht ist angekommen. Ich melde mich bald.',
+      success: 'Vielen Dank! Ihre Nachricht ist angekommen. Ich melde mich bald.',
       error: 'Da ist etwas schiefgelaufen. Bitte versuchen Sie es erneut oder schreiben Sie direkt per E-Mail.',
       required: 'Bitte ausfüllen.',
       invalidEmail: 'Bitte eine gültige E-Mail-Adresse angeben.',
       directEmail: 'Oder direkt:',
     },
     vita: {
-      metaTitle: 'Vita — Majdon Löhr · Schauspielerin',
+      metaTitle: 'Vita · Majdon Löhr · Schauspielerin',
       metaDescription:
         'Vita von Majdon Löhr: Werdegang, Steckbrief, besondere Fähigkeiten und Engagements im Sprech- und Bühnentheater.',
       eyebrow: 'Vita',
       heading: 'Vita & Werdegang',
-      lead: 'Wer ich bin, was ich kann und wo ich gespielt habe — auf einen Blick.',
+      lead: 'Wer ich bin, was ich kann und wo ich gespielt habe. Auf einen Blick.',
       profileHeading: 'Steckbrief',
       skillsHeading: 'Besondere Fähigkeiten',
       creditsHeading: 'Engagements & Produktionen',
     },
     galleryPage: {
-      metaTitle: 'Galerie — Majdon Löhr · Schauspielerin',
+      metaTitle: 'Galerie · Majdon Löhr · Schauspielerin',
       metaDescription:
         'Bühnen- und Porträtaufnahmen von Majdon Löhr aus Produktionen und Shootings.',
     },
@@ -134,9 +134,9 @@ export const ui = {
 
   en: {
     meta: {
-      title: 'Majdon Löhr — Actress · Stage & Theatre',
+      title: 'Majdon Löhr · Actress · Stage & Theatre',
       description:
-        'Majdon Löhr is an actress focused on stage and spoken theatre — comedic strength, a powerful voice and real stage energy. Engagements in Hannover, Braunschweig and independent productions. Casting & booking enquiries welcome.',
+        'Majdon Löhr is an actress focused on stage and spoken theatre: comedic strength, a powerful voice and real stage energy. Engagements in Hannover, Braunschweig and independent productions. Casting & booking enquiries welcome.',
       ogAlt: 'Portrait of Majdon Löhr',
     },
     nav: {
@@ -155,8 +155,8 @@ export const ui = {
       eyebrow: 'Actress · Stage · Theatre',
       nameFirst: 'Majdon',
       nameLast: 'Löhr',
-      tagline: 'At home on stage — from the very first step.',
-      bio: 'Trained at the Freie Schauspielschule Hamburg and at home in spoken theatre. My strength is comedy — carried by a powerful voice and a stage energy that takes the audience along.',
+      tagline: 'At home on stage. From the very first step.',
+      bio: 'Trained at the Freie Schauspielschule Hamburg and at home in spoken theatre. My strength is comedy, carried by a powerful voice and a stage energy that takes the audience along.',
       engagementsLabel: 'Engagements',
       engagements: ['Hannover', 'Braunschweig', 'Independent Productions'],
       ctaPrimary: 'View the gallery',
@@ -167,12 +167,12 @@ export const ui = {
       eyebrow: 'About',
       heading: 'The person behind the role',
       teaser:
-        'An actress with the stage as her home — trained in Hamburg, at home in comedy, carried by a voice that takes a whole room along.',
+        'I love people, animals and the moment an entire room bursts out laughing. The stage is my home, and comedy is where I belong most of all.',
       cta: 'More about me',
       body: [
-        'I’m Majdon Löhr — an actress at the start of her journey, with the stage as her artistic home. In 2025 I completed my training at the Freie Schauspielschule Hamburg, and across some fifty to sixty performances I learned what a room, a light and an audience can make of a text.',
-        'Spoken theatre is my home; comedy is my greatest joy: the precise timing, the courage to go big, the moment a whole room laughs together. Add to that a voice that carries — in performance, in song, or at the microphone for voice work.',
-        'I move between Braunschweig and Hamburg, curious about new roles, ensembles and signatures — and ready for the next step.',
+        'I’m Majdon Löhr, actress and very much a stage person. In 2025 I completed my training at the Freie Schauspielschule Hamburg, and across some fifty to sixty performances I discovered what a room, a light and an audience can make of a text.',
+        'Spoken theatre is my home and comedy is my greatest joy: precise timing, the courage to go big, the moment a whole room laughs together. And I love a good scare just as much. I bring a voice that carries, whether in performance, in song or at the microphone.',
+        'When I’m not on stage, you’ll find me outdoors in nature, with animals or with the people who matter most to me. I’m open, warm-hearted and ready for new roles, ensembles and ways of working.',
       ],
     },
     work: {
@@ -193,7 +193,7 @@ export const ui = {
       eyebrow: 'Gallery',
       heading: 'Impressions',
       teaser:
-        'A glimpse of shoots, roles and private moments — from productions, rehearsals and in between.',
+        'A glimpse of shoots, roles and private moments. From productions, rehearsals and in between.',
       cta: 'View the gallery',
       filterAll: 'All',
       filterShootings: 'Portraits',
@@ -209,7 +209,7 @@ export const ui = {
       eyebrow: 'Contact',
       heading: 'Let’s talk',
       intro:
-        'Casting, booking, or simply getting to know each other — drop me a line. I look forward to hearing from you.',
+        'Casting, booking, or simply getting to know each other: drop me a line. I look forward to hearing from you.',
       nameLabel: 'Name',
       emailLabel: 'Email',
       messageLabel: 'Message',
@@ -218,25 +218,25 @@ export const ui = {
       messagePlaceholder: 'What’s it about?',
       submit: 'Send message',
       sending: 'Sending …',
-      success: 'Thank you — your message has arrived. I’ll be in touch soon.',
+      success: 'Thank you! Your message has arrived. I’ll be in touch soon.',
       error: 'Something went wrong. Please try again or email me directly.',
       required: 'Please fill this in.',
       invalidEmail: 'Please enter a valid email address.',
       directEmail: 'Or directly:',
     },
     vita: {
-      metaTitle: 'CV — Majdon Löhr · Actress',
+      metaTitle: 'CV · Majdon Löhr · Actress',
       metaDescription:
         'CV of Majdon Löhr: background, casting profile, special skills and stage engagements.',
       eyebrow: 'CV',
       heading: 'CV & Background',
-      lead: 'Who I am, what I can do and where I have performed — at a glance.',
+      lead: 'Who I am, what I can do and where I have performed. At a glance.',
       profileHeading: 'Profile',
       skillsHeading: 'Special Skills',
       creditsHeading: 'Engagements & Productions',
     },
     galleryPage: {
-      metaTitle: 'Gallery — Majdon Löhr · Actress',
+      metaTitle: 'Gallery · Majdon Löhr · Actress',
       metaDescription:
         'Stage and portrait photographs of Majdon Löhr from productions and shoots.',
     },
