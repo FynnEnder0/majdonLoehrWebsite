@@ -4,7 +4,7 @@ import CurtainRule from './CurtainRule.astro';
 /** Section-Überschrift: Playfair Display mit Curtain Rule. */
 interface Props {
   text: string;
-  as?: 'h2' | 'h3';
+  as?: 'h1' | 'h2' | 'h3';
   class?: string;
 }
 const { text, as: Tag = 'h2', class: className = '' } = Astro.props;

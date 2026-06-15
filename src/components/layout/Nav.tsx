@@ -1,34 +1,22 @@
 import { useEffect, useState } from 'react';
 
-export type NavLabels = {
-  about: string;
-  work: string;
-  press: string;
-  gallery: string;
-  contact: string;
-  menu: string;
-  close: string;
-};
+export type NavLink = { href: string; label: string };
 
 type Props = {
-  labels: NavLabels;
+  /** Navigationslinks (absolute Pfade inkl. Locale, damit sie von jeder Seite funktionieren). */
+  links: NavLink[];
+  /** Startseite der aktiven Sprache, z. B. "/de". */
+  homeHref: string;
+  labels: { menu: string; close: string };
   /** Pfad der gleichen Seite in der anderen Sprache. */
   altHref: string;
   /** Code der anderen Sprache, z. B. "EN". */
   altLabel: string;
 };
 
-export default function Nav({ labels, altHref, altLabel }: Props) {
+export default function Nav({ links, homeHref, labels, altHref, altLabel }: Props) {
   const [open, setOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
-
-  const links: Array<[string, string]> = [
-    ['#about', labels.about],
-    ['#work', labels.work],
-    ['#press', labels.press],
-    ['#gallery', labels.gallery],
-    ['#contact', labels.contact],
-  ];
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 24);
@@ -60,7 +48,7 @@ export default function Nav({ labels, altHref, altLabel }: Props) {
         className="mx-auto flex max-w-stage items-center justify-between px-6 py-4"
       >
         <a
-          href="#top"
+          href={homeHref}
           className="font-display text-lg tracking-wide text-parchment"
           aria-label="Majdon Löhr — Start"
         >
@@ -70,7 +58,7 @@ export default function Nav({ labels, altHref, altLabel }: Props) {
         {/* Desktop-Links */}
         <div className="hidden items-center gap-8 md:flex">
           <ul className="flex items-center gap-7 text-sm">
-            {links.map(([href, label]) => (
+            {links.map(({ href, label }) => (
               <li key={href}>
                 <a
                   href={href}
@@ -125,7 +113,7 @@ export default function Nav({ labels, altHref, altLabel }: Props) {
         className={`md:hidden ${open ? 'block' : 'hidden'}`}
       >
         <ul className="flex flex-col gap-1 px-6 pb-8 pt-2">
-          {links.map(([href, label]) => (
+          {links.map(({ href, label }) => (
             <li key={href}>
               <a
                 href={href}

@@ -28,6 +28,17 @@ const altLang = getAltLang(lang);
 const altHref = `/${altLang}${path}`;
 const altLabel = altLang.toUpperCase();
 
+// Navigation: One-Pager-Anker + echte Detailseiten (Vita, Galerie).
+// Absolute Pfade inkl. Locale, damit die Links auch von Unterseiten funktionieren.
+const home = `/${lang}`;
+const navLinks = [
+  { href: `${home}#about`, label: t.nav.about },
+  { href: `${home}/vita`, label: t.nav.vita },
+  { href: `${home}/galerie`, label: t.nav.gallery },
+  { href: `${home}#press`, label: t.nav.press },
+  { href: `${home}#contact`, label: t.nav.contact },
+];
+
 const jsonLd = personJsonLd(lang);
 ---
 
@@ -86,15 +97,9 @@ const jsonLd = personJsonLd(lang);
 
     <Nav
       client:load
-      labels={{
-        about: t.nav.about,
-        work: t.nav.work,
-        press: t.nav.press,
-        gallery: t.nav.gallery,
-        contact: t.nav.contact,
-        menu: t.nav.menu,
-        close: t.nav.close,
-      }}
+      links={navLinks}
+      homeHref={home}
+      labels={{ menu: t.nav.menu, close: t.nav.close }}
       altHref={altHref}
       altLabel={altLabel}
     />

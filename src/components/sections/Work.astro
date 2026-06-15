@@ -3,6 +3,7 @@ import Section from '../ui/Section.astro';
 import Eyebrow from '../ui/Eyebrow.astro';
 import SectionHeading from '../ui/SectionHeading.astro';
 import CurtainRule from '../ui/CurtainRule.astro';
+import Button from '../ui/Button.astro';
 import MotionReveal from '../ui/MotionReveal.tsx';
 import { credits } from '../../data/credits';
 import { useTranslations, type Lang } from '../../i18n/utils';
@@ -12,6 +13,9 @@ interface Props {
 }
 const { lang } = Astro.props;
 const t = useTranslations(lang);
+
+// Teaser: nur die ersten (wichtigsten) Engagements — die volle Liste lebt auf /vita
+const featured = credits.slice(0, 3);
 ---
 
 <Section id="work" class="bg-wing-shadow/30" aria-labelledby="work-heading">
@@ -27,15 +31,10 @@ const t = useTranslations(lang);
 
   <ul class="mt-12 divide-y divide-wing-shadow border-t border-wing-shadow">
     {
-      credits.map((c, i) => (
+      featured.map((c, i) => (
         <li>
-          <MotionReveal client:visible delay={Math.min(i * 0.08, 0.4)}>
-            <article
-              class:list={[
-                'group grid grid-cols-1 gap-2 py-6 sm:grid-cols-[5rem_1fr_auto] sm:items-baseline sm:gap-6',
-                c.featured && 'sm:pl-0',
-              ]}
-            >
+          <MotionReveal client:visible delay={Math.min(i * 0.08, 0.3)}>
+            <article class="group grid grid-cols-1 gap-2 py-6 sm:grid-cols-[5rem_1fr_auto] sm:items-baseline sm:gap-6">
               <span class="font-mono text-base font-bold tracking-[0.12em] text-footlight">
                 {c.year}
               </span>
@@ -60,7 +59,9 @@ const t = useTranslations(lang);
     }
   </ul>
 
-  <p class="mt-8 font-mono text-xs uppercase tracking-[0.16em] text-warm-ash/50">
-    {t.work.placeholderNote}
-  </p>
+  <div class="mt-10">
+    <Button href={`/${lang}/vita#engagements`} variant="secondary">
+      {t.work.cta} →
+    </Button>
+  </div>
 </Section>

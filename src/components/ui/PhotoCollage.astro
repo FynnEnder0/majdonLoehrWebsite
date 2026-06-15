@@ -1,0 +1,44 @@
+---
+import { Image } from 'astro:assets';
+import type { ImageMetadata } from 'astro';
+
+/**
+ * Scrapbook-Collage — überlappende, leicht gedrehte „Polaroids".
+ * Bringt Persönlichkeit auf die Detailseiten (Backstage-/Pinnwand-Gefühl).
+ * Hover richtet das Bild gerade & hebt es hervor; auf Mobile einfaches Stapeln.
+ * Übergänge respektieren prefers-reduced-motion (global in global.css entschärft).
+ */
+interface Props {
+  images: { src: ImageMetadata; alt: string }[];
+  class?: string;
+}
+const { images, class: className = '' } = Astro.props;
+
+// feste, sich wiederholende Rotations-/Versatz-Werte → bewusst „handgepinnt"
+const tilts = ['-rotate-3', 'rotate-2', '-rotate-1', 'rotate-3', '-rotate-2', 'rotate-1'];
+const offsets = ['sm:mt-0', 'sm:mt-8', 'sm:-mt-4', 'sm:mt-6', 'sm:mt-2', 'sm:-mt-2'];
+---
+
+<div class:list={['flex flex-wrap items-start justify-center gap-5 sm:gap-7', className]}>
+  {
+    images.map((img, i) => (
+      <figure
+        class:list={[
+          'group w-40 shrink-0 bg-parchment p-2 pb-7 shadow-[0_14px_34px_rgba(0,0,0,0.55)] transition-transform duration-300 will-change-transform hover:z-10 hover:rotate-0 hover:scale-[1.04] sm:w-52',
+          tilts[i % tilts.length],
+          offsets[i % offsets.length],
+        ]}
+      >
+        <Image
+          src={img.src}
+          alt={img.alt}
+          widths={[320, 480]}
+          sizes="(min-width: 640px) 13rem, 10rem"
+          quality={72}
+          loading="lazy"
+          class="aspect-[3/4] w-full object-cover"
+        />
+      </figure>
+    ))
+  }
+</div>

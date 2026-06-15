@@ -3,7 +3,8 @@ import { getImage } from 'astro:assets';
 import Section from '../ui/Section.astro';
 import Eyebrow from '../ui/Eyebrow.astro';
 import SectionHeading from '../ui/SectionHeading.astro';
-import GalleryClient from './GalleryClient.tsx';
+import Button from '../ui/Button.astro';
+import MotionReveal from '../ui/MotionReveal.tsx';
 import { gallery } from '../../data/gallery';
 import { useTranslations, type Lang } from '../../i18n/utils';
 
@@ -13,56 +14,46 @@ interface Props {
 const { lang } = Astro.props;
 const t = useTranslations(lang);
 
-// Build-Zeit-Optimierung: Thumb (Grid) + Full (Lightbox) je Bild.
-const items = await Promise.all(
-  gallery.map(async (g) => {
-    const thumb = await getImage({ src: g.src, width: 800, format: 'webp', quality: 72 });
-    const full = await getImage({ src: g.src, width: 1600, format: 'webp', quality: 80 });
-    // Generierte (orientierungs-korrigierte) Maße für korrektes Seitenverhältnis / CLS
-    const width = Number(thumb.attributes.width ?? g.src.width);
-    const height = Number(thumb.attributes.height ?? g.src.height);
-    return {
-      thumb: thumb.src,
-      full: full.src,
-      width,
-      height,
-      alt: g.alt[lang],
-      category: g.category,
-    };
+// Teaser: ein kurzer Vorschau-Streifen — die volle Galerie lebt auf /galerie
+const previews = await Promise.all(
+  gallery.slice(0, 4).map(async (g) => {
+    const img = await getImage({ src: g.src, width: 500, format: 'webp', quality: 72 });
+    return { src: img.src, alt: g.alt[lang] };
   }),
 );
 ---
 
 <Section id="gallery" class="bg-wing-shadow/30" aria-labelledby="gallery-heading">
-  <Eyebrow act="IV" text={t.gallery.eyebrow} />
-  <div id="gallery-heading">
-    <SectionHeading text={t.gallery.heading} class="mt-5" />
-  </div>
-
-  <GalleryClient
-    client:visible
-    items={items}
-    labels={{
-      all: t.gallery.filterAll,
-      stage: t.gallery.filterStage,
-      portrait: t.gallery.filterPortrait,
-      close: t.gallery.close,
-      prev: t.gallery.prev,
-      next: t.gallery.next,
-    }}
-  />
-
-  <!-- Demo-Reel Platzhalter -->
-  <div class="mt-16">
-    <h3 class="font-mono text-sm font-bold uppercase tracking-[0.2em] text-dusk-label">
-      {t.gallery.reelHeading}
-    </h3>
-    <div
-      class="mt-4 flex aspect-video w-full items-center justify-center border border-dashed border-wing-shadow bg-stage-dark/60"
-    >
-      <p class="font-body text-lg italic text-warm-ash/60">
-        {t.gallery.reelPlaceholder}
-      </p>
+  <MotionReveal client:visible>
+    <Eyebrow act="IV" text={t.gallery.eyebrow} />
+    <div id="gallery-heading">
+      <SectionHeading text={t.gallery.heading} class="mt-5" />
     </div>
-  </div>
+    <p class="mt-6 max-w-prose-col font-body text-2xl leading-relaxed text-warm-ash">
+      {t.gallery.teaser}
+    </p>
+  </MotionReveal>
+
+  <MotionReveal client:visible delay={0.1}>
+    <a
+      href={`/${lang}/galerie`}
+      class="group mt-10 grid grid-cols-2 gap-4 sm:grid-cols-4"
+      aria-label={t.gallery.cta}
+    >
+      {
+        previews.map((p) => (
+          <img
+            src={p.src}
+            alt={p.alt}
+            loading="lazy"
+            class="aspect-[3/4] w-full border border-wing-shadow object-cover transition-transform duration-300 group-hover:scale-[1.02]"
+          />
+        ))
+      }
+    </a>
+
+    <div class="mt-8">
+      <Button href={`/${lang}/galerie`} variant="secondary">{t.gallery.cta} →</Button>
+    </div>
+  </MotionReveal>
 </Section>
