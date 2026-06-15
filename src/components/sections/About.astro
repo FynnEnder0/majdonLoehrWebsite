@@ -1,5 +1,6 @@
 ---
-import Section from '../ui/Section.astro';
+import { Image } from 'astro:assets';
+import aboutPortrait from '../../assets/about-laecheln.jpg';
 import Eyebrow from '../ui/Eyebrow.astro';
 import SectionHeading from '../ui/SectionHeading.astro';
 import Button from '../ui/Button.astro';
@@ -13,19 +14,49 @@ const { lang } = Astro.props;
 const t = useTranslations(lang);
 ---
 
-<Section id="about" class="bg-stage-dark" aria-labelledby="about-heading">
-  <MotionReveal client:visible>
-    <div class="max-w-prose-col">
-      <Eyebrow act="I" text={t.about.eyebrow} />
-      <div id="about-heading">
-        <SectionHeading text={t.about.heading} class="mt-5" />
+<section
+  id="about"
+  aria-labelledby="about-heading"
+  class="relative isolate flex min-h-[42rem] scroll-mt-24 items-center overflow-hidden bg-stage-dark px-6 py-24 md:min-h-[48rem] md:py-section"
+>
+  <!-- Hintergrundbild: Shooting-Porträt (Lächeln), links angesetzt -->
+  <div class="absolute inset-0 -z-10">
+    <div class="absolute inset-y-0 left-0 w-[92%] sm:w-[64%] lg:w-[50%]">
+      <Image
+        src={aboutPortrait}
+        alt=""
+        widths={[480, 720, 960, 1280]}
+        sizes="(min-width: 1024px) 50vw, (min-width: 640px) 64vw, 92vw"
+        quality={82}
+        class="h-full w-full object-cover object-[center_20%] brightness-100"
+      />
+      <!-- Foto in die dunkle Bühne einblenden: nach rechts auslaufen … -->
+      <div
+        class="absolute inset-0 bg-gradient-to-r from-stage-dark/20 via-stage-dark/50 to-stage-dark"
+      >
       </div>
-      <p class="mt-6 font-body text-2xl leading-relaxed text-warm-ash md:text-3xl">
-        {t.about.teaser}
-      </p>
-      <div class="mt-9">
-        <Button href={`/${lang}/vita`} variant="secondary">{t.about.cta} →</Button>
+      <!-- … und oben/unten leicht abdunkeln (Vignette) -->
+      <div
+        class="absolute inset-0 bg-gradient-to-t from-stage-dark/40 via-transparent to-stage-dark/30"
+      >
       </div>
     </div>
-  </MotionReveal>
-</Section>
+  </div>
+
+  <div class="mx-auto w-full max-w-stage">
+    <MotionReveal client:visible>
+      <div class="ml-auto max-w-prose-col text-right">
+        <Eyebrow act="I" text={t.about.eyebrow} class="flex-row-reverse" />
+        <div id="about-heading">
+          <SectionHeading text={t.about.heading} class="mt-5 flex-row-reverse" />
+        </div>
+        <p class="mt-6 font-body text-2xl leading-relaxed text-warm-ash md:text-3xl">
+          {t.about.teaser}
+        </p>
+        <div class="mt-9">
+          <Button href={`/${lang}/vita`} variant="secondary">{t.about.cta} →</Button>
+        </div>
+      </div>
+    </MotionReveal>
+  </div>
+</section>

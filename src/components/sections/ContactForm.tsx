@@ -77,7 +77,7 @@ export default function ContactForm({ labels, endpoint, accessKey, email }: Prop
         headers: { Accept: 'application/json', 'Content-Type': 'application/json' },
         body: JSON.stringify({
           ...data,
-          subject: `Anfrage über majdonloehr.de — ${data.name}`,
+          _subject: `Anfrage über majdonloehr.de — ${data.name}`,
           ...(accessKey ? { access_key: accessKey } : {}),
         }),
       });

@@ -5,7 +5,10 @@ import Eyebrow from '../ui/Eyebrow.astro';
 import SectionHeading from '../ui/SectionHeading.astro';
 import Button from '../ui/Button.astro';
 import MotionReveal from '../ui/MotionReveal.tsx';
-import { gallery } from '../../data/gallery';
+import warmlicht from '../../assets/gallery/shootings/shootingwarmlicht.jpg';
+import schwarzweiss from '../../assets/gallery/shootings/shootingschwarzweiss.jpg';
+import lichtoben from '../../assets/gallery/shootings/shootinglichtoben.jpg';
+import portrait from '../../assets/gallery/shootings/portrait.jpg';
 import { useTranslations, type Lang } from '../../i18n/utils';
 
 interface Props {
@@ -14,11 +17,14 @@ interface Props {
 const { lang } = Astro.props;
 const t = useTranslations(lang);
 
-// Teaser: ein kurzer Vorschau-Streifen — die volle Galerie lebt auf /galerie
+// Teaser: kuratierter Vorschau-Streifen — vier verschiedene Shootings
+// (warmes Licht, Schwarz-Weiß, Licht von oben, Studio) statt der ersten vier.
+const shootAlt =
+  lang === 'de' ? 'Porträtaufnahme von Majdon Löhr' : 'Portrait photograph of Majdon Löhr';
 const previews = await Promise.all(
-  gallery.slice(0, 4).map(async (g) => {
-    const img = await getImage({ src: g.src, width: 500, format: 'webp', quality: 72 });
-    return { src: img.src, alt: g.alt[lang] };
+  [warmlicht, schwarzweiss, lichtoben, portrait].map(async (src) => {
+    const img = await getImage({ src, width: 500, format: 'webp', quality: 72 });
+    return { src: img.src, alt: shootAlt };
   }),
 );
 ---
