@@ -6,19 +6,20 @@ export type GalleryItem = {
   width: number;
   height: number;
   alt: string;
-  category: 'stage' | 'portrait';
+  category: 'shootings' | 'rollen' | 'privat';
 };
 
 export type GalleryLabels = {
   all: string;
-  stage: string;
-  portrait: string;
+  shootings: string;
+  rollen: string;
+  privat: string;
   close: string;
   prev: string;
   next: string;
 };
 
-type Filter = 'all' | 'portrait' | 'stage';
+type Filter = 'all' | 'shootings' | 'rollen' | 'privat';
 
 export default function GalleryClient({
   items,
@@ -38,8 +39,9 @@ export default function GalleryClient({
 
   const filters: Array<[Filter, string]> = [
     ['all', labels.all],
-    ['portrait', labels.portrait],
-    ['stage', labels.stage],
+    ['shootings', labels.shootings],
+    ['rollen', labels.rollen],
+    ['privat', labels.privat],
   ];
 
   const close = useCallback(() => setActive(null), []);

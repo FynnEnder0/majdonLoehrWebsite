@@ -2,20 +2,25 @@ import type { ImageMetadata } from 'astro';
 
 /**
  * Galerie-Bilder — Kategorie ergibt sich aus dem Unterordner:
- *   src/assets/gallery/portrait/  → Porträt
- *   src/assets/gallery/stage/     → Bühne
+ *   src/assets/gallery/shootings/ → Shootings (Porträt)
+ *   src/assets/gallery/rollen/    → Rollen & Bühne
+ *   src/assets/gallery/privat/    → Privat
  * Neues Bild hinzufügen = einfach in den passenden Unterordner legen.
  */
-const portraitImages = import.meta.glob<{ default: ImageMetadata }>(
-  '../assets/gallery/portrait/*.{jpg,jpeg,png}',
+const shootingsImages = import.meta.glob<{ default: ImageMetadata }>(
+  '../assets/gallery/shootings/*.{jpg,jpeg,png}',
   { eager: true },
 );
-const stageImages = import.meta.glob<{ default: ImageMetadata }>(
-  '../assets/gallery/stage/*.{jpg,jpeg,png}',
+const rollenImages = import.meta.glob<{ default: ImageMetadata }>(
+  '../assets/gallery/rollen/*.{jpg,jpeg,png}',
+  { eager: true },
+);
+const privatImages = import.meta.glob<{ default: ImageMetadata }>(
+  '../assets/gallery/privat/*.{jpg,jpeg,png}',
   { eager: true },
 );
 
-export type GalleryCategory = 'stage' | 'portrait';
+export type GalleryCategory = 'shootings' | 'rollen' | 'privat';
 
 export type GalleryImage = {
   src: ImageMetadata;
@@ -24,13 +29,17 @@ export type GalleryImage = {
 };
 
 const alts: Record<GalleryCategory, { de: string; en: string }> = {
-  stage: {
-    de: 'Majdon Löhr in einer Bühnenproduktion',
-    en: 'Majdon Löhr in a stage production',
-  },
-  portrait: {
+  shootings: {
     de: 'Porträtaufnahme von Majdon Löhr',
     en: 'Portrait photograph of Majdon Löhr',
+  },
+  rollen: {
+    de: 'Majdon Löhr in einer Rolle auf der Bühne',
+    en: 'Majdon Löhr in a stage role',
+  },
+  privat: {
+    de: 'Majdon Löhr — privat',
+    en: 'Majdon Löhr — personal',
   },
 };
 
@@ -45,8 +54,9 @@ function build(
   }));
 }
 
-// Porträts zuerst, dann Bühne
+// Reihenfolge: Shootings → Rollen → Privat
 export const gallery: GalleryImage[] = [
-  ...build(portraitImages, 'portrait'),
-  ...build(stageImages, 'stage'),
+  ...build(shootingsImages, 'shootings'),
+  ...build(rollenImages, 'rollen'),
+  ...build(privatImages, 'privat'),
 ];

@@ -12,12 +12,12 @@ import { ui, type Lang } from '../../i18n/ui';
 import { useTranslations } from '../../i18n/utils';
 
 // Scrapbook-Collage: Mix aus Porträts & Privatem fürs „Mensch hinter der Rolle"-Gefühl
-import c1 from '../../assets/gallery/portrait/portrait.jpg';
-import c2 from '../../assets/gallery/portrait/shootingwarmlicht.jpg';
-import c3 from '../../assets/private/natur.jpg';
-import c4 from '../../assets/gallery/portrait/shootingschwarzweiss.jpg';
-import c5 from '../../assets/private/billiard.jpg';
-import c6 from '../../assets/private/baumnah.jpg';
+import c1 from '../../assets/gallery/shootings/portrait.jpg';
+import c2 from '../../assets/gallery/shootings/shootingwarmlicht.jpg';
+import c3 from '../../assets/gallery/privat/natur.jpg';
+import c4 from '../../assets/gallery/shootings/shootingschwarzweiss.jpg';
+import c5 from '../../assets/gallery/privat/billiard.jpg';
+import c6 from '../../assets/gallery/privat/baumnah.jpg';
 
 export function getStaticPaths() {
   return (Object.keys(ui) as Lang[]).map((lang) => ({ params: { lang } }));
