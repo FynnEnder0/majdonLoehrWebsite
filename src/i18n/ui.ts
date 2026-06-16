@@ -51,7 +51,7 @@ export const ui = {
         'Ich liebe Menschen, Tiere und den Moment, in dem ein ganzer Saal lacht. Auf der Bühne bin ich zuhause, in der Komödie erst recht.',
       cta: 'Mehr über mich',
       body: [
-        'Ich bin Majdon Löhr, Schauspielerin und durch und durch ein Bühnenmensch. 2025 habe ich meine Ausbildung an der Freien Schauspielschule Hamburg abgeschlossen und in rund fünfzig bis sechzig Auftritten erlebt, was ein Raum, ein Licht und ein Publikum aus einem Text machen können.',
+        'Ich bin Majdon Löhr, Schauspielerin und durch und durch ein Bühnenmensch. Im August 2026 schließe ich meine Ausbildung an der Freien Schauspielschule Hamburg ab. Erste Bühnenerfahrung habe ich schon am Jungen Theater, der Bühne der Schauspielschule, gesammelt. Das nächste Engagement liegt mit rund fünfzig bis sechzig Auftritten in „2:22 – Eine Geistergeschichte“ noch vor mir. Jedes Mal erlebe ich aufs Neue, was ein Raum, Licht und ein Publikum aus einem Text machen können.',
         'Mein Zuhause ist das Sprechtheater, meine größte Freude die Komödie: das präzise Timing, der Mut zur Übertreibung, der Moment, in dem ein Saal gemeinsam lacht. Für einen guten Grusel bin ich ebenso zu haben. Dazu kommt eine Leidenschaft fürs Synchronsprechen, eine Stimme, die trägt, ob auf der Bühne, im Gesang oder hinter dem Mikrofon.',
         'Das Synchronsprechen ist eine eigene Leidenschaft. Hier trägt die Stimme alles: keine Bühne, kein Körper, nur Klang, und trotzdem soll jemand in eine Geschichte gezogen werden. Diese Kreativität begeistert mich sehr.',
         'Wenn ich nicht auf der Bühne stehe, bin ich am liebsten draußen in der Natur oder bei Tieren und den Menschen, die mir wichtig sind. Ich bin offen, aufgeschlossen und freue mich auf neue Rollen, Ensembles und Handschriften.',
@@ -173,7 +173,7 @@ export const ui = {
         'I love people, animals and the moment an entire room bursts out laughing. The stage is my home, and comedy is where I belong most of all.',
       cta: 'More about me',
       body: [
-        'I’m Majdon Löhr, actress and very much a stage person. In 2025 I completed my training at the Freie Schauspielschule Hamburg, and across some fifty to sixty performances I discovered what a room, a light and an audience can make of a text.',
+        'I’m Majdon Löhr, actress and very much a stage person. In August 2026 I complete my training at the Freie Schauspielschule Hamburg. I’ve already gathered my first stage experience at the Junges Theater, the school’s own stage. My next engagement lies ahead of me, with some fifty to sixty performances in “2:22 – A Ghost Story”. Each time I get to discover anew what a room, light and an audience can make of a text.',
         'Spoken theatre is my home and comedy is my greatest joy: precise timing, the courage to go big, the moment a whole room laughs together. And I love a good scare just as much.',
         'Voice acting is a passion of its own. Here the voice carries everything: no stage, no body, just sound, and yet someone should be drawn right into a story. That kind of creativity genuinely excites me.',
         'When I’m not on stage, you’ll find me outdoors in nature, with animals or with the people who matter most to me. I’m open, warm-hearted and ready for new roles, ensembles and ways of working.',
