@@ -4,7 +4,7 @@
  */
 export const site = {
   name: 'Majdon Löhr',
-  url: 'https://majdonloehr.de',
+  url: 'https://www.majdonloehr.de',
   // TODO: echte Kontakt-E-Mail eintragen
   email: 'maj.loehr17@gmail.com',
   // Drittanbieter-Formular (Formspree/Web3Forms) — via .env überschreibbar

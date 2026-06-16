@@ -7,7 +7,7 @@ import sitemap from '@astrojs/sitemap';
 
 // https://astro.build/config
 export default defineConfig({
-  site: 'https://majdonloehr.de',
+  site: 'https://www.majdonloehr.de',
   trailingSlash: 'ignore',
 
   i18n: {
