@@ -65,6 +65,7 @@ export const ui = {
       cta: 'Alle Engagements',
       placeholderNote: 'Die vollständige Werkliste wird laufend ergänzt.',
       columns: { role: 'Rolle', production: 'Produktion', venue: 'Haus', year: 'Jahr' },
+      upcoming: 'demnächst',
     },
     press: {
       eyebrow: 'Presse',
@@ -186,6 +187,7 @@ export const ui = {
       cta: 'All engagements',
       placeholderNote: 'The full list of work is continually being added to.',
       columns: { role: 'Role', production: 'Production', venue: 'Venue', year: 'Year' },
+      upcoming: 'upcoming',
     },
     press: {
       eyebrow: 'Press',

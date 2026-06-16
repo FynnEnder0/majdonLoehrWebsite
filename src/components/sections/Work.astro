@@ -34,12 +34,16 @@ const featured = credits.slice(0, 3);
       featured.map((c, i) => (
         <li>
           <MotionReveal client:visible delay={Math.min(i * 0.08, 0.3)}>
-            <article class="group grid grid-cols-1 gap-2 py-6 sm:grid-cols-[5rem_1fr_auto] sm:items-baseline sm:gap-6">
+            <article class="group grid grid-cols-1 gap-2 py-6 sm:grid-cols-[5rem_1fr_auto] sm:items-center sm:gap-6">
               <span class="font-mono text-base font-bold tracking-[0.12em] text-footlight">
                 {c.year}
+                {c.upcoming && (
+                  <span class="block font-mono text-xs font-normal not-italic normal-case tracking-wide text-dusk-label/60 mt-0.5">
+                    {t.work.upcoming}
+                  </span>
+                )}
               </span>
               <div class="flex items-stretch gap-3">
-                {c.featured && <CurtainRule class="min-h-full" />}
                 <div>
                   <h3 class="font-display text-2xl text-parchment md:text-3xl">
                     {c.production[lang]}
