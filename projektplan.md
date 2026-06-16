@@ -1,5 +1,36 @@
 # Majdon Löhr — Website Projektplan
-> Zuletzt aktualisiert: 09.06.2026
+> Zuletzt aktualisiert: 16.06.2026
+
+---
+
+## TODO: Pressestimmen aktivieren
+
+Die Presse-Sektion ist aktuell **deaktiviert**, weil noch keine echten Zitate vorliegen.
+Der gesamte Code ist bereits vorhanden und muss nur wieder eingeschaltet werden:
+
+**Schritt 1 — Echte Zitate eintragen**
+Datei: `src/data/press.ts`
+Die Platzhalter durch echte Zitate mit Quellenangabe und optionalem Artikel-Link ersetzen.
+
+**Schritt 2 — Sektion einblenden**
+Datei: `src/pages/[lang]/index.astro`
+```astro
+// Import wieder hinzufügen:
+import Press from '../../components/sections/Press.astro';
+
+// Im Template zwischen <Work> und <Gallery> einfügen:
+<Press lang={lang} />
+```
+
+**Schritt 3 — Nav-Link wieder aktivieren**
+Datei: `src/layouts/Base.astro`
+```ts
+// In navLinks wieder hinzufügen (zwischen Vita/Galerie und Kontakt):
+{ href: `${home}#press`, label: t.nav.press },
+```
+
+Die i18n-Strings (`src/i18n/ui.ts` → `press.eyebrow`, `press.heading`, `press.readMore`) und
+das Komponenten-Template (`src/components/sections/Press.astro`) sind unverändert erhalten.
 
 ---
 

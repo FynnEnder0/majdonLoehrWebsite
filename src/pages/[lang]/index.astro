@@ -3,7 +3,6 @@ import Base from '../../layouts/Base.astro';
 import Hero from '../../components/sections/Hero.astro';
 import About from '../../components/sections/About.astro';
 import Work from '../../components/sections/Work.astro';
-import Press from '../../components/sections/Press.astro';
 import Gallery from '../../components/sections/Gallery.astro';
 import Contact from '../../components/sections/Contact.astro';
 import { ui, type Lang } from '../../i18n/ui';
@@ -19,7 +18,6 @@ const { lang } = Astro.params as { lang: Lang };
   <Hero lang={lang} />
   <About lang={lang} />
   <Work lang={lang} />
-  <Press lang={lang} />
   <Gallery lang={lang} />
   <Contact lang={lang} />
 </Base>

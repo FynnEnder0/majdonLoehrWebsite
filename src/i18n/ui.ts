@@ -17,7 +17,7 @@ export const ui = {
     meta: {
       title: 'Majdon Löhr · Schauspielerin · Bühne & Theater',
       description:
-        'Majdon Löhr ist Schauspielerin mit Schwerpunkt Bühne und Sprechtheater. Komödiantische Stärke, starke Stimme, Bühnenenergie. Engagements in Hannover, Braunschweig und freien Produktionen. Casting- & Buchungsanfragen willkommen.',
+        'Majdon Löhr ist Schauspielerin mit Schwerpunkt Bühne, Sprechtheater und Synchronsprechen. Komödiantische Stärke, starke Stimme, Bühnenenergie. Engagements in Hannover, Braunschweig und freien Produktionen. Casting- & Buchungsanfragen willkommen.',
       ogAlt: 'Porträt von Majdon Löhr',
     },
     nav: {
@@ -33,11 +33,11 @@ export const ui = {
       toContent: 'Zum Inhalt springen',
     },
     hero: {
-      eyebrow: 'Schauspielerin · Bühne · Theater',
+      eyebrow: 'Schauspielerin · Bühne · Synchron',
       nameFirst: 'Majdon',
       nameLast: 'Löhr',
-      tagline: 'Auf der Bühne zuhause. Ab dem ersten Schritt.',
-      bio: 'Ausgebildet an der Freien Schauspielschule Hamburg, zuhause im Sprechtheater. Meine Stärke ist die Komödie, getragen von einer kräftigen Stimme und einer Bühnenenergie, die das Publikum mitnimmt.',
+      tagline: 'Komödie im Blut. Horror im Herzen.',
+      bio: 'Ausgebildet an der Freien Schauspielschule Hamburg. Zuhause im Sprechtheater, glücklich, wenn einem Saal vor Lachen oder Spannung die Luft wegbleibt.',
       engagementsLabel: 'Engagements',
       engagements: ['Hannover', 'Braunschweig', 'Freie Produktionen'],
       ctaPrimary: 'Zur Galerie',
@@ -52,7 +52,7 @@ export const ui = {
       cta: 'Mehr über mich',
       body: [
         'Ich bin Majdon Löhr, Schauspielerin und durch und durch ein Bühnenmensch. 2025 habe ich meine Ausbildung an der Freien Schauspielschule Hamburg abgeschlossen und in rund fünfzig bis sechzig Auftritten erlebt, was ein Raum, ein Licht und ein Publikum aus einem Text machen können.',
-        'Mein Zuhause ist das Sprechtheater, meine größte Freude die Komödie: das präzise Timing, der Mut zur Übertreibung, der Moment, in dem ein Saal gemeinsam lacht. Für einen guten Grusel bin ich ebenso zu haben. Dazu kommt eine Stimme, die trägt, ob im Spiel, im Gesang oder vorm Mikrofon.',
+        'Mein Zuhause ist das Sprechtheater, meine größte Freude die Komödie: das präzise Timing, der Mut zur Übertreibung, der Moment, in dem ein Saal gemeinsam lacht. Für einen guten Grusel bin ich ebenso zu haben. Dazu kommt eine Leidenschaft fürs Synchronsprechen — eine Stimme, die trägt, ob auf der Bühne, im Gesang oder hinter dem Mikrofon.',
         'Wenn ich nicht auf der Bühne stehe, bin ich am liebsten draußen in der Natur oder bei Tieren und den Menschen, die mir wichtig sind. Ich bin offen, aufgeschlossen und freue mich auf neue Rollen, Ensembles und Handschriften.',
       ],
     },
@@ -125,7 +125,7 @@ export const ui = {
       backHome: 'Zurück zur Startseite',
     },
     footer: {
-      tagline: 'Schauspielerin · Bühne & Theater',
+      tagline: 'Schauspielerin · Bühne · Synchron',
       basedIn: 'Braunschweig & Hamburg',
       rights: 'Alle Rechte vorbehalten.',
       backToTop: 'Nach oben',
@@ -136,7 +136,7 @@ export const ui = {
     meta: {
       title: 'Majdon Löhr · Actress · Stage & Theatre',
       description:
-        'Majdon Löhr is an actress focused on stage and spoken theatre: comedic strength, a powerful voice and real stage energy. Engagements in Hannover, Braunschweig and independent productions. Casting & booking enquiries welcome.',
+        'Majdon Löhr is an actress focused on stage, spoken theatre and voice acting: comedic strength, a powerful voice and real stage energy. Engagements in Hannover, Braunschweig and independent productions. Casting & booking enquiries welcome.',
       ogAlt: 'Portrait of Majdon Löhr',
     },
     nav: {
@@ -152,11 +152,11 @@ export const ui = {
       toContent: 'Skip to content',
     },
     hero: {
-      eyebrow: 'Actress · Stage · Theatre',
+      eyebrow: 'Actress · Stage · Voice Acting',
       nameFirst: 'Majdon',
       nameLast: 'Löhr',
-      tagline: 'At home on stage. From the very first step.',
-      bio: 'Trained at the Freie Schauspielschule Hamburg and at home in spoken theatre. My strength is comedy, carried by a powerful voice and a stage energy that takes the audience along.',
+      tagline: 'Comedy in the blood. Horror in the heart.',
+      bio: 'Trained at the Freie Schauspielschule Hamburg. At home in spoken theatre, happiest when a room is breathless with laughter or suspense.',
       engagementsLabel: 'Engagements',
       engagements: ['Hannover', 'Braunschweig', 'Independent Productions'],
       ctaPrimary: 'View the gallery',
@@ -171,7 +171,7 @@ export const ui = {
       cta: 'More about me',
       body: [
         'I’m Majdon Löhr, actress and very much a stage person. In 2025 I completed my training at the Freie Schauspielschule Hamburg, and across some fifty to sixty performances I discovered what a room, a light and an audience can make of a text.',
-        'Spoken theatre is my home and comedy is my greatest joy: precise timing, the courage to go big, the moment a whole room laughs together. And I love a good scare just as much. I bring a voice that carries, whether in performance, in song or at the microphone.',
+        'Spoken theatre is my home and comedy is my greatest joy: precise timing, the courage to go big, the moment a whole room laughs together. And I love a good scare just as much. Voice acting is a second great passion — I bring a voice that carries, whether on stage, in song or behind the microphone.',
         'When I’m not on stage, you’ll find me outdoors in nature, with animals or with the people who matter most to me. I’m open, warm-hearted and ready for new roles, ensembles and ways of working.',
       ],
     },
@@ -244,7 +244,7 @@ export const ui = {
       backHome: 'Back to home',
     },
     footer: {
-      tagline: 'Actress · Stage & Theatre',
+      tagline: 'Actress · Stage · Voice Acting',
       basedIn: 'Braunschweig & Hamburg',
       rights: 'All rights reserved.',
       backToTop: 'Back to top',
