@@ -52,7 +52,8 @@ export const ui = {
       cta: 'Mehr über mich',
       body: [
         'Ich bin Majdon Löhr, Schauspielerin und durch und durch ein Bühnenmensch. 2025 habe ich meine Ausbildung an der Freien Schauspielschule Hamburg abgeschlossen und in rund fünfzig bis sechzig Auftritten erlebt, was ein Raum, ein Licht und ein Publikum aus einem Text machen können.',
-        'Mein Zuhause ist das Sprechtheater, meine größte Freude die Komödie: das präzise Timing, der Mut zur Übertreibung, der Moment, in dem ein Saal gemeinsam lacht. Für einen guten Grusel bin ich ebenso zu haben. Dazu kommt eine Leidenschaft fürs Synchronsprechen — eine Stimme, die trägt, ob auf der Bühne, im Gesang oder hinter dem Mikrofon.',
+        'Mein Zuhause ist das Sprechtheater, meine größte Freude die Komödie: das präzise Timing, der Mut zur Übertreibung, der Moment, in dem ein Saal gemeinsam lacht. Für einen guten Grusel bin ich ebenso zu haben. Dazu kommt eine Leidenschaft fürs Synchronsprechen, eine Stimme, die trägt, ob auf der Bühne, im Gesang oder hinter dem Mikrofon.',
+        'Das Synchronsprechen ist eine eigene Leidenschaft. Hier trägt die Stimme alles: keine Bühne, kein Körper, nur Klang, und trotzdem soll jemand in eine Geschichte gezogen werden. Diese Kreativität begeistert mich sehr.',
         'Wenn ich nicht auf der Bühne stehe, bin ich am liebsten draußen in der Natur oder bei Tieren und den Menschen, die mir wichtig sind. Ich bin offen, aufgeschlossen und freue mich auf neue Rollen, Ensembles und Handschriften.',
       ],
     },
@@ -171,7 +172,8 @@ export const ui = {
       cta: 'More about me',
       body: [
         'I’m Majdon Löhr, actress and very much a stage person. In 2025 I completed my training at the Freie Schauspielschule Hamburg, and across some fifty to sixty performances I discovered what a room, a light and an audience can make of a text.',
-        'Spoken theatre is my home and comedy is my greatest joy: precise timing, the courage to go big, the moment a whole room laughs together. And I love a good scare just as much. Voice acting is a second great passion — I bring a voice that carries, whether on stage, in song or behind the microphone.',
+        'Spoken theatre is my home and comedy is my greatest joy: precise timing, the courage to go big, the moment a whole room laughs together. And I love a good scare just as much.',
+        'Voice acting is a passion of its own. Here the voice carries everything: no stage, no body, just sound, and yet someone should be drawn right into a story. That kind of creativity genuinely excites me.',
         'When I’m not on stage, you’ll find me outdoors in nature, with animals or with the people who matter most to me. I’m open, warm-hearted and ready for new roles, ensembles and ways of working.',
       ],
     },
