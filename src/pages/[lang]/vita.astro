@@ -10,6 +10,10 @@ import { castingFacts, skillGroups } from '../../data/profile';
 import { credits } from '../../data/credits';
 import { ui, type Lang } from '../../i18n/ui';
 import { useTranslations } from '../../i18n/utils';
+import { site } from '../../data/site';
+
+// Porträt für Casting-Sheet (Print)
+import printPortrait from '../../assets/gallery/shootings/shootingwarmlicht.jpg';
 
 // Scrapbook-Collage: Mix aus Porträts & Privatem fürs „Mensch hinter der Rolle"-Gefühl
 import c1 from '../../assets/gallery/shootings/portrait.jpg';
@@ -31,7 +35,7 @@ const collage = [c1, c2, c3, c4, c5, c6].map((src) => ({ src, alt: t.meta.ogAlt 
 
 <Base lang={lang} title={t.vita.metaTitle} description={t.vita.metaDescription}>
   <!-- Kopf + Scrapbook -->
-  <Section class="bg-stage-dark" aria-labelledby="vita-heading">
+  <Section id="vita-intro" class="bg-stage-dark" aria-labelledby="vita-heading">
     <MotionReveal client:visible>
       <Eyebrow text={t.vita.eyebrow} />
       <div id="vita-heading">
@@ -40,12 +44,44 @@ const collage = [c1, c2, c3, c4, c5, c6].map((src) => ({ src, alt: t.meta.ogAlt 
       <p class="mt-6 max-w-prose-col font-body text-2xl italic leading-relaxed text-warm-ash">
         {t.vita.lead}
       </p>
+      <div class="vita-export-wrap mt-8">
+        <button
+          id="vita-export-btn"
+          class="inline-flex items-center gap-2 font-mono text-sm font-bold uppercase tracking-[0.14em] transition-colors duration-200 min-h-[44px] px-6 bg-footlight text-stage-dark hover:bg-parchment focus-visible:bg-parchment"
+        >
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/>
+          </svg>
+          {t.vita.exportPdf}
+        </button>
+      </div>
     </MotionReveal>
 
     <MotionReveal client:visible delay={0.1}>
       <PhotoCollage images={collage} class="mt-14" />
     </MotionReveal>
   </Section>
+
+  <!-- Print-only: Casting-Sheet-Header (auf dem Screen unsichtbar) -->
+  <div class="print-only hidden" aria-hidden="true">
+    <div class="print-header">
+      <div class="print-header-text">
+        <div class="print-name">{site.name}</div>
+        <div class="print-role">{lang === 'de' ? site.jobTitle.de : site.jobTitle.en} · {lang === 'de' ? 'Bühne · Synchron' : 'Stage · Voice Acting'}</div>
+        <div class="print-contact">
+          {new URL(site.url).hostname}<br />
+          {site.email}
+        </div>
+      </div>
+      <img
+        src={printPortrait.src}
+        width={printPortrait.width}
+        height={printPortrait.height}
+        alt={site.name}
+        class="print-portrait"
+      />
+    </div>
+  </div>
 
   <!-- Narrative Bio + Steckbrief + Fähigkeiten -->
   <Section class="bg-wing-shadow/20">
@@ -160,10 +196,14 @@ const collage = [c1, c2, c3, c4, c5, c6].map((src) => ({ src, alt: t.meta.ogAlt 
     <div class="mt-16">
       <a
         href={`/${lang}`}
-        class="font-mono text-sm uppercase tracking-[0.16em] text-footlight transition-colors hover:text-parchment"
+        class="vita-back-link font-mono text-sm uppercase tracking-[0.16em] text-footlight transition-colors hover:text-parchment"
       >
         ← {t.common.backHome}
       </a>
     </div>
   </Section>
+
+  <script>
+    document.getElementById('vita-export-btn')?.addEventListener('click', () => window.print());
+  </script>
 </Base>

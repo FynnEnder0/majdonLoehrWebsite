@@ -116,6 +116,7 @@ export const ui = {
       profileHeading: 'Steckbrief',
       skillsHeading: 'Besondere Fähigkeiten',
       creditsHeading: 'Engagements & Produktionen',
+      exportPdf: 'Casting-Sheet herunterladen',
     },
     galleryPage: {
       metaTitle: 'Galerie · Majdon Löhr · Schauspielerin',
@@ -236,6 +237,7 @@ export const ui = {
       profileHeading: 'Profile',
       skillsHeading: 'Special Skills',
       creditsHeading: 'Engagements & Productions',
+      exportPdf: 'Download Casting Sheet',
     },
     galleryPage: {
       metaTitle: 'Gallery · Majdon Löhr · Actress',

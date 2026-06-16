@@ -85,3 +85,115 @@
     scroll-behavior: auto !important;
   }
 }
+
+/* ---------------------------------------------------------------------------
+   Druck / PDF-Export (Casting-Sheet)
+--------------------------------------------------------------------------- */
+@media print {
+  @page {
+    size: A4 portrait;
+    margin: 16mm 18mm;
+  }
+
+  /* Alle Farb-Tokens auf Druck-taugliche Werte mappen */
+  :root {
+    --color-stage-dark:  #ffffff;
+    --color-wing-shadow: #d0bfa8;
+    --color-parchment:   #1a1209;
+    --color-warm-ash:    #2e1c0e;
+    --color-dusk-label:  #7a5a30;
+    --color-footlight:   #9a6018;
+  }
+
+  /* Basis: kleinere Schrift für A4 */
+  html { font-size: 8.5pt; }
+
+  body {
+    background: white !important;
+    color: #1a1209 !important;
+    line-height: 1.5;
+  }
+
+  /* Framer Motion startet mit opacity:0 — im Druck alles aufdecken */
+  * {
+    opacity: 1 !important;
+    transform: none !important;
+    animation: none !important;
+    transition: none !important;
+  }
+
+  /* Nicht drucken */
+  nav,
+  footer,
+  #vita-intro,
+  .vita-export-wrap,
+  .vita-back-link {
+    display: none !important;
+  }
+
+  /* Nur im Druck sichtbar */
+  .print-only {
+    display: block !important;
+  }
+
+  /* Sektionen: Padding runter */
+  section {
+    padding-top: 10pt !important;
+    padding-bottom: 10pt !important;
+  }
+
+  /* Seitenumbruch innerhalb von Credits vermeiden */
+  li,
+  article {
+    page-break-inside: avoid;
+    break-inside: avoid;
+  }
+
+  /* ── Print-Header ──────────────────────────────────────────────── */
+  .print-header {
+    display: flex !important;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 14pt;
+    border-bottom: 1.5pt solid #9a6018;
+    padding-bottom: 10pt;
+    margin-bottom: 14pt;
+  }
+
+  .print-header-text {
+    flex: 1;
+  }
+
+  .print-name {
+    font-family: "Playfair Display", Georgia, serif;
+    font-size: 22pt;
+    font-weight: 400;
+    color: #1a1209;
+    line-height: 1.1;
+  }
+
+  .print-role {
+    font-family: "Courier New", Courier, monospace;
+    font-size: 7pt;
+    text-transform: uppercase;
+    letter-spacing: 0.18em;
+    color: #9a6018;
+    margin-top: 5pt;
+  }
+
+  .print-contact {
+    font-family: "Courier New", Courier, monospace;
+    font-size: 7.5pt;
+    color: #5a3a1a;
+    line-height: 1.7;
+    margin-top: 6pt;
+  }
+
+  .print-portrait {
+    width: 3cm;
+    height: 4cm;
+    object-fit: cover;
+    object-position: center top;
+    flex-shrink: 0;
+  }
+}
