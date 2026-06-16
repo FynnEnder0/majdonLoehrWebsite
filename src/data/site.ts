@@ -15,6 +15,8 @@ export const site = {
   social: {
     instagram: '',
   },
+  // Vimeo-Embed-URL für den Demo-Reel — leer lassen solange kein Video vorhanden
+  reelUrl: '',
   jobTitle: { de: 'Schauspielerin', en: 'Actress' },
   // Casting-Stammdaten aus projektplan.md
   base: 'Braunschweig & Hamburg',

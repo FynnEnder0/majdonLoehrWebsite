@@ -6,6 +6,7 @@ import Eyebrow from '../../components/ui/Eyebrow.astro';
 import SectionHeading from '../../components/ui/SectionHeading.astro';
 import GalleryClient from '../../components/sections/GalleryClient.tsx';
 import { gallery } from '../../data/gallery';
+import { site } from '../../data/site';
 import { ui, type Lang } from '../../i18n/ui';
 import { useTranslations } from '../../i18n/utils';
 
@@ -56,19 +57,21 @@ const items = await Promise.all(
       }}
     />
 
-    <!-- Demo-Reel Platzhalter -->
-    <div class="mt-16">
-      <h2 class="font-mono text-sm font-bold uppercase tracking-[0.2em] text-dusk-label">
-        {t.gallery.reelHeading}
-      </h2>
-      <div
-        class="mt-4 flex aspect-video w-full items-center justify-center border border-dashed border-wing-shadow bg-stage-dark/60"
-      >
-        <p class="font-body text-lg italic text-warm-ash/60">
-          {t.gallery.reelPlaceholder}
-        </p>
+    {site.reelUrl && (
+      <div class="mt-16">
+        <h2 class="font-mono text-sm font-bold uppercase tracking-[0.2em] text-dusk-label">
+          {t.gallery.reelHeading}
+        </h2>
+        <div class="mt-4 aspect-video w-full overflow-hidden">
+          <iframe
+            src={site.reelUrl}
+            class="h-full w-full"
+            allow="autoplay; fullscreen; picture-in-picture"
+            allowfullscreen
+          />
+        </div>
       </div>
-    </div>
+    )}
 
     <div class="mt-16">
       <a
