@@ -19,10 +19,8 @@ export default defineConfig({
     },
   },
 
-  // Root → Default-Locale (statische Redirect-Seite für GitHub Pages)
-  redirects: {
-    '/': '/de',
-  },
+  // Root → Default-Locale: eigene src/pages/index.astro (mit Favicon-Links,
+  // damit Google das Favicon auch über die Startseite findet)
 
   integrations: [
     react(),

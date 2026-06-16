@@ -1,0 +1,26 @@
+---
+// Root-Weiterleitung auf die Default-Locale (/de).
+// Statt Astros automatischer Redirect-Stub-Seite eine eigene Seite, damit der
+// <head> die Favicon-Links enthält — so findet Google das Favicon auch über
+// die Startseite "/" (nicht nur über /de/).
+const target = '/de';
+---
+
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="refresh" content={`0;url=${target}`} />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png" />
+    <link rel="alternate icon" href="/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="canonical" href="https://www.majdonloehr.de/de" />
+    <meta name="robots" content="noindex" />
+    <title>Majdon Löhr</title>
+  </head>
+  <body>
+    <a href={target}>Weiter zu <code>{target}</code></a>
+    <script is:inline>window.location.replace('/de');</script>
+  </body>
+</html>
