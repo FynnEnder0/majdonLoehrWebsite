@@ -35,10 +35,24 @@ export const credits: Credit[] = [
     upcoming: true,
   },
   {
+    year: '2026',
+    role: { de: 'Holzapfel', en: 'Dogberry' },
+    production: { de: 'Viel Lärm um Nichts', en: 'Much Ado About Nothing' },
+    venue: { de: 'Junges Theater Hamburg', en: 'Junges Theater Hamburg' },
+    category: 'theater',
+  },
+  {
     year: '2025',
     role: { de: 'Feline Neumann', en: 'Feline Neumann' },
     production: { de: 'Diagnose Fehlinformation', en: 'Diagnosis Misinformation' },
     venue: { de: 'Kurzfilm · NDR · BS19', en: 'Short film · NDR · BS19' },
     category: 'film',
+  },
+  {
+    year: '2025',
+    role: { de: 'Lettes Frau', en: "Lette's Wife" },
+    production: { de: 'Der Hässliche', en: 'The Ugly One' },
+    venue: { de: 'Junges Theater Hamburg', en: 'Junges Theater Hamburg' },
+    category: 'theater',
   },
 ];
