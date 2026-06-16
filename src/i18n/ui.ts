@@ -157,7 +157,7 @@ export const ui = {
       nameFirst: 'Majdon',
       nameLast: 'Löhr',
       tagline: 'Comedy in the blood. Horror in the heart.',
-      bio: 'Trained at the Freie Schauspielschule Hamburg. At home in spoken theatre, happiest when a room is breathless with laughter or suspense.',
+      bio: 'Trained at the Freie Schauspielschule Hamburg. At home on stage and at the microphone, happiest when a room holds its breath or a listener is drawn into a story.',
       engagementsLabel: 'Engagements',
       engagements: ['Hannover', 'Braunschweig', 'Independent Productions'],
       ctaPrimary: 'View the gallery',
