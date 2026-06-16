@@ -40,7 +40,7 @@ export default function Nav({ links, homeHref, labels, altHref, altLabel }: Prop
       className={`fixed inset-x-0 top-0 z-50 transition-colors duration-300 ${
         scrolled || open
           ? 'bg-stage-dark/90 backdrop-blur-sm'
-          : 'bg-transparent'
+          : 'bg-gradient-to-b from-stage-dark/70 to-transparent'
       }`}
     >
       <nav
@@ -62,7 +62,7 @@ export default function Nav({ links, homeHref, labels, altHref, altLabel }: Prop
               <li key={href}>
                 <a
                   href={href}
-                  className="font-mono text-sm uppercase tracking-[0.15em] text-warm-ash transition-colors hover:text-parchment"
+                  className="font-mono text-sm uppercase tracking-[0.15em] text-parchment/90 transition-colors hover:text-parchment"
                 >
                   {label}
                 </a>
