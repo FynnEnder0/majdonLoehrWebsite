@@ -6,6 +6,7 @@ import SectionHeading from '../../components/ui/SectionHeading.astro';
 import CurtainRule from '../../components/ui/CurtainRule.astro';
 import PhotoCollage from '../../components/ui/PhotoCollage.astro';
 import MotionReveal from '../../components/ui/MotionReveal.tsx';
+import ActivityIcon from '../../components/ui/ActivityIcon.astro';
 import { castingFacts, skillGroups } from '../../data/profile';
 import { credits } from '../../data/credits';
 import { ui, type Lang } from '../../i18n/ui';
@@ -173,7 +174,11 @@ const collage = [c1, c2, c3, c4, c5, c6].map((src) => ({ src, alt: t.meta.ogAlt 
                     </span>
                   )}
                 </span>
-                <div class="flex items-stretch gap-3">
+                <div class="flex items-start gap-3">
+                  <ActivityIcon
+                    type={c.category}
+                    class="mt-0.5 h-11 w-11 shrink-0 text-footlight"
+                  />
                   <div>
                     <h3 class="font-display text-2xl text-parchment md:text-3xl">
                       {c.production[lang]}

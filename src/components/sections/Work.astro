@@ -5,6 +5,7 @@ import SectionHeading from '../ui/SectionHeading.astro';
 import CurtainRule from '../ui/CurtainRule.astro';
 import Button from '../ui/Button.astro';
 import MotionReveal from '../ui/MotionReveal.tsx';
+import ActivityIcon from '../ui/ActivityIcon.astro';
 import { credits } from '../../data/credits';
 import { useTranslations, type Lang } from '../../i18n/utils';
 
@@ -43,7 +44,11 @@ const featured = credits.slice(0, 3);
                   </span>
                 )}
               </span>
-              <div class="flex items-stretch gap-3">
+              <div class="flex items-start gap-3">
+                <ActivityIcon
+                  type={c.category}
+                  class="mt-0.5 h-11 w-11 shrink-0 text-footlight"
+                />
                 <div>
                   <h3 class="font-display text-2xl text-parchment md:text-3xl">
                     {c.production[lang]}
