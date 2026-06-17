@@ -35,6 +35,7 @@ export const ui = {
     hero: {
       eyebrow: 'Schauspielerin · Bühne · Synchron',
       nameFirst: 'Majdon',
+      nameMiddle: 'Charlotte',
       nameLast: 'Löhr',
       tagline: 'Komödie im Blut. Horror im Herzen.',
       bio: 'Ausgebildet an der Freien Schauspielschule Hamburg. Zuhause im Sprechtheater, glücklich, wenn einem Saal vor Lachen oder Spannung die Luft wegbleibt.',
@@ -157,6 +158,7 @@ export const ui = {
     hero: {
       eyebrow: 'Actress · Stage · Voice Acting',
       nameFirst: 'Majdon',
+      nameMiddle: 'Charlotte',
       nameLast: 'Löhr',
       tagline: 'Comedy in the blood. Horror in the heart.',
       bio: 'Trained at the Freie Schauspielschule Hamburg. At home on stage and at the microphone, happiest when a room holds its breath or a listener is drawn into a story.',
