@@ -73,7 +73,7 @@ export const credits: Credit[] = [
     role: { de: 'Rezitation', en: 'Recitation' },
     production: { de: 'Anna Blume', en: 'Anna Blume' },
     venue: { de: 'Textrezitation · Kurt Schwitters', en: 'Recitation · Kurt Schwitters' },
-    category: 'voice',
+    category: 'theater',
   },
   {
     year: '2024',
