@@ -28,7 +28,7 @@ export const credits: Credit[] = [
   },
   {
     year: '2026',
-    role: { de: 'Ensemble', en: 'Ensemble' },
+    role: { de: 'Magdalena', en: 'Magdalena' },
     production: { de: 'Bernarda Albas Haus', en: 'The House of Bernarda Alba' },
     venue: { de: 'Hamburger Kammerspiele', en: 'Hamburger Kammerspiele' },
     category: 'theater',
@@ -53,6 +53,36 @@ export const credits: Credit[] = [
     role: { de: 'Lettes Frau', en: "Lette's Wife" },
     production: { de: 'Der Hässliche', en: 'The Ugly One' },
     venue: { de: 'Junges Theater Hamburg', en: 'Junges Theater Hamburg' },
+    category: 'theater',
+  },
+  {
+    year: '2025',
+    role: {
+      de: 'Gudrun Gundermann · Vivi Venus · Stimme Werbespot',
+      en: 'Gudrun Gundermann · Vivi Venus · Commercial voice',
+    },
+    production: {
+      de: 'Gudrun Gundermann und der kosmische Kundenservice',
+      en: 'Gudrun Gundermann and the Cosmic Customer Service',
+    },
+    venue: { de: 'Hörspiel · Eigene Produktion', en: 'Radio play · Own production' },
+    category: 'voice',
+  },
+  {
+    year: '2025',
+    role: { de: 'Rezitation', en: 'Recitation' },
+    production: { de: 'Anna Blume', en: 'Anna Blume' },
+    venue: { de: 'Textrezitation · Kurt Schwitters', en: 'Recitation · Kurt Schwitters' },
+    category: 'voice',
+  },
+  {
+    year: '2024',
+    role: { de: 'Frida', en: 'Frida' },
+    production: { de: 'Old Friends', en: 'Old Friends' },
+    venue: {
+      de: 'Junges Theater Hamburg · Eigene Produktion',
+      en: 'Junges Theater Hamburg · Own production',
+    },
     category: 'theater',
   },
 ];
