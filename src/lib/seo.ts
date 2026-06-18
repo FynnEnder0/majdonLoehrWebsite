@@ -24,6 +24,8 @@ function theaterEvents(lang: Lang) {
     .map((c) => ({
       '@type': 'TheaterEvent',
       name: c.production[lang],
+      // Pflichtfeld für schema.org/Event — wir kennen nur das Jahr (gültiges ISO-8601-Date).
+      startDate: c.year,
       location: { '@type': 'Place', name: c.venue[lang] },
       ...(c.upcoming ? { eventStatus: 'https://schema.org/EventScheduled' } : {}),
     }));
