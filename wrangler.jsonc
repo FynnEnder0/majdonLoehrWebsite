@@ -1,0 +1,10 @@
+{
+  // Statische Astro-Seite auf Cloudflare: nur die fertig gebauten Dateien
+  // aus dist/ als Static Assets ausliefern (kein Worker-Script, kein SSR).
+  // Worker-Name muss zur bestehenden *.workers.dev-URL passen.
+  "name": "loehrwebsite",
+  "compatibility_date": "2025-06-01",
+  "assets": {
+    "directory": "./dist"
+  }
+}
