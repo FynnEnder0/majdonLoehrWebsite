@@ -19,7 +19,7 @@ export const castingFacts: Fact[] = [
   { label: { de: 'Schuhgröße', en: 'Shoe size' }, value: { de: '37', en: '37 (EU)' } },
   { label: { de: 'Stimmlage', en: 'Voice type' }, value: { de: 'Sopran', en: 'Soprano' } },
   { label: { de: 'Sprachen', en: 'Languages' }, value: { de: 'Deutsch (Muttersprache), Englisch (Bühne)', en: 'German (native), English (stage)' } },
-  { label: { de: 'Führerschein', en: 'Driving licence' }, value: { de: 'Klasse B + Trecker', en: 'Class B + tractor' } },
+  { label: { de: 'Führerschein', en: 'Driving licence' }, value: { de: 'Klasse B + Motorrad + Trecker', en: 'Class B + motorcycle + tractor' } },
   { label: { de: 'Fahrzeug', en: 'Vehicle' }, value: { de: 'Eigenes Auto', en: 'Own car' } },
   { label: { de: 'Schwimmen', en: 'Swimming' }, value: { de: 'Ja, gut', en: 'Yes, strong' } },
 ];
