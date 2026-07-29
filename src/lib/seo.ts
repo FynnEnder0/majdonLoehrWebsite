@@ -9,7 +9,7 @@ const WEBSITE_ID = `${site.url}/#website`;
 
 /** Nicht-leere Social-/Profil-URLs für sameAs (verankert die Entität bei Google & KI-Suche). */
 function sameAs(): string[] {
-  return Object.values(site.social).filter((v): v is string => Boolean(v));
+  return Object.values(site.social).filter((url) => url.length > 0);
 }
 
 /** Fähigkeiten flach + lokalisiert — füttert knowsAbout. */

@@ -20,8 +20,8 @@ export const credits: Credit[] = [
     role: { de: 'Ensemble', en: 'Ensemble' },
     production: { de: '2:22 – Eine Geistergeschichte', en: '2:22 – A Ghost Story' },
     venue: {
-      de: 'Neues Theater Hannover · Komödie Braunschweig',
-      en: 'Neues Theater Hannover · Komödie Braunschweig',
+      de: 'Neues Theater Hannover · Komödie am Altstadtmarkt Braunschweig',
+      en: 'Neues Theater Hannover · Komödie am Altstadtmarkt Braunschweig',
     },
     category: 'theater',
     upcoming: true,

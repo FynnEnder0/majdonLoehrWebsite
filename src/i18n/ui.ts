@@ -33,12 +33,13 @@ export const ui = {
       toContent: 'Zum Inhalt springen',
     },
     hero: {
-      eyebrow: 'Schauspielerin · Bühne · Synchron',
+      eyebrow: 'Schauspielerin · Sprecherin',
       nameFirst: 'Majdon',
       nameMiddle: 'Charlotte',
       nameLast: 'Löhr',
-      tagline: 'Komödie im Blut. Horror im Herzen.',
-      bio: 'Ausgebildet an der Freien Schauspielschule Hamburg. Zuhause im Sprechtheater, glücklich, wenn einem Saal vor Lachen oder Spannung die Luft wegbleibt.',
+      tagline: '„Auch Schlafen ist eine Form der Kritik, vor allem im Theater."',
+      taglineSource: '— George Bernard Shaw',
+      bio: 'Ausgebildete Nachwuchsschauspielerin aus Hamburg mit großer Spielfreude und einer besonderen Leidenschaft für die Komödie.',
       engagementsLabel: 'Engagements',
       engagements: ['Hannover', 'Braunschweig', 'Freie Produktionen'],
       ctaPrimary: 'Zur Galerie',
@@ -49,13 +50,13 @@ export const ui = {
       eyebrow: 'Über mich',
       heading: 'Der Mensch hinter der Rolle',
       teaser:
-        'Ich liebe Menschen, Tiere und den Moment, in dem ein ganzer Saal lacht. Auf der Bühne bin ich zuhause, in der Komödie erst recht.',
+        'Vielseitigkeit und Neugier begleiten mich auf der Bühne und im Leben.',
       cta: 'Mehr über mich',
       body: [
-        'Ich bin Majdon Löhr, Schauspielerin und durch und durch ein Bühnenmensch. Im August 2026 schließe ich meine Ausbildung an der Freien Schauspielschule Hamburg ab. Erste Bühnenerfahrung habe ich schon am Jungen Theater, der Bühne der Schauspielschule, gesammelt. Das nächste Engagement liegt mit rund fünfzig bis sechzig Auftritten in „2:22 – Eine Geistergeschichte“ noch vor mir. Jedes Mal erlebe ich aufs Neue, was ein Raum, Licht und ein Publikum aus einem Text machen können.',
-        'Mein Zuhause ist das Sprechtheater, meine größte Freude die Komödie: das präzise Timing, der Mut zur Übertreibung, der Moment, in dem ein Saal gemeinsam lacht. Für einen guten Grusel bin ich ebenso zu haben. Dazu kommt eine Leidenschaft fürs Synchronsprechen, eine Stimme, die trägt, ob auf der Bühne, im Gesang oder hinter dem Mikrofon.',
-        'Das Synchronsprechen ist eine eigene Leidenschaft. Hier trägt die Stimme alles: keine Bühne, kein Körper, nur Klang, und trotzdem soll jemand in eine Geschichte gezogen werden. Diese Kreativität begeistert mich sehr.',
-        'Wenn ich nicht auf der Bühne stehe, bin ich am liebsten draußen in der Natur oder bei Tieren und den Menschen, die mir wichtig sind. Ich bin offen, aufgeschlossen und freue mich auf neue Rollen, Ensembles und Handschriften.',
+        'Ich bin Majdon Charlotte Löhr, Schauspielerin und durch und durch ein Bühnenmensch. Im August 2026 schließe ich meine Ausbildung an der Freien Schauspielschule Hamburg ab, wo ich bereits auf der Bühne des Jungen Theaters Hamburg wertvolle Bühnenerfahrung sammeln konnte. Nebenbei durfte ich in studentischen Kurzfilmprojekten des NDR als Haupt- und Nebendarstellerin vor der Kamera stehen. Mein erstes Engagement mit rund fünfzig bis sechzig Vorstellungen führt mich anschließend an das Neue Theater Hannover und die Komödie am Altstadtmarkt in Braunschweig. Zuvor werde ich beim Schauspielschultreffen 2026 in den Hamburger Kammerspielen zu sehen sein.',
+        'Meine Leidenschaft für Musik und Kunst entwickelte sich schon früh. Als Kind spielte ich verschiedene Instrumente und fand schließlich an der Waldorfschule zum Theater. Dort wurde mir bewusst, dass mein Platz auf der Bühne ist und dass ich Menschen mit meinen Figuren zum Lachen bringen, unterhalten und berühren möchte. Mit diesem Wunsch entschied ich mich, in Hamburg das schauspielerische Handwerk zu erlernen.',
+        'Aufgewachsen bin ich auf einem kleinen Bauernhof in Sachsen-Anhalt zwischen Schafen, Hühnern und Hunden. Diese Nähe zur Natur prägt mich bis heute. Wenn ich nicht auf der Bühne stehe, beobachte ich Vögel, bestimme Pflanzen am Wegesrand und entdecke gerne die kleinen Dinge des Lebens. Gleichzeitig bin ich ein sehr bewegungsfreudiger Mensch und halte mich seit drei Jahren durch regelmäßiges Boxtraining fit.',
+        'Besonders viel Freude bereitet mir die Komödie. Das präzise Timing, der Mut zur Übertreibung und die Verbindung zum Publikum begeistern mich hier besonders. Darüber hinaus ist der Gesang ein wichtiger Teil meiner kreativen Arbeit und außerdem möchte ich in Zukunft gerne an Projekten im Bereich Synchronsprechen mitwirken. Ich bin offen, neugierig und freue mich darauf, neue Rollen zu entdecken, mit unterschiedlichen Ensembles zu arbeiten und verschiedene künstlerische Handschriften kennenzulernen.',
       ],
     },
     work: {
@@ -119,6 +120,10 @@ export const ui = {
       skillsHeading: 'Besondere Fähigkeiten',
       creditsHeading: 'Engagements & Produktionen',
       exportPdf: 'Casting-Sheet herunterladen',
+      castingBio: [
+        'Ich bin Majdon Charlotte Löhr, Nachwuchsschauspielerin aus Hamburg. Im August 2026 schließe ich meine Ausbildung an der Freien Schauspielschule Hamburg ab. Während meiner Ausbildung konnte ich bereits Bühnenerfahrung am Jungen Theater Hamburg sammeln und war in studentischen Kurzfilmprojekten des NDR als Haupt- und Nebendarstellerin vor der Kamera tätig.',
+        '2026 bin ich beim Schauspielschultreffen in den Hamburger Kammerspielen in Federico García Lorcas „Bernarda Albas Haus" zu sehen. Anschließend führt mich mein erstes Engagement mit rund fünfzig bis sechzig Vorstellungen an das Neue Theater Hannover sowie die Komödie am Altstadtmarkt in Braunschweig.',
+      ],
     },
     galleryPage: {
       metaTitle: 'Galerie · Majdon Löhr · Schauspielerin',
@@ -129,7 +134,7 @@ export const ui = {
       backHome: 'Zurück zur Startseite',
     },
     footer: {
-      tagline: 'Schauspielerin · Bühne · Synchron',
+      tagline: 'Schauspielerin · Sprecherin',
       basedIn: 'Braunschweig & Hamburg',
       rights: 'Alle Rechte vorbehalten.',
       backToTop: 'Nach oben',
@@ -156,12 +161,13 @@ export const ui = {
       toContent: 'Skip to content',
     },
     hero: {
-      eyebrow: 'Actress · Stage · Voice Acting',
+      eyebrow: 'Actress · Voice Artist',
       nameFirst: 'Majdon',
       nameMiddle: 'Charlotte',
       nameLast: 'Löhr',
-      tagline: 'Comedy in the blood. Horror in the heart.',
-      bio: 'Trained at the Freie Schauspielschule Hamburg. At home on stage and at the microphone, happiest when a room holds its breath or a listener is drawn into a story.',
+      tagline: '“Sleeping is also a form of criticism, especially in the theatre.”',
+      taglineSource: '— George Bernard Shaw',
+      bio: 'A trained young actress from Hamburg with a great love of performing and a special passion for comedy.',
       engagementsLabel: 'Engagements',
       engagements: ['Hannover', 'Braunschweig', 'Independent Productions'],
       ctaPrimary: 'View the gallery',
@@ -172,13 +178,13 @@ export const ui = {
       eyebrow: 'About',
       heading: 'The person behind the role',
       teaser:
-        'I love people, animals and the moment an entire room bursts out laughing. The stage is my home, and comedy is where I belong most of all.',
+        'Versatility and curiosity accompany me on stage and in life.',
       cta: 'More about me',
       body: [
-        'I’m Majdon Löhr, actress and very much a stage person. In August 2026 I complete my training at the Freie Schauspielschule Hamburg. I’ve already gathered my first stage experience at the Junges Theater, the school’s own stage. My next engagement lies ahead of me, with some fifty to sixty performances in “2:22 – A Ghost Story”. Each time I get to discover anew what a room, light and an audience can make of a text.',
-        'Spoken theatre is my home and comedy is my greatest joy: precise timing, the courage to go big, the moment a whole room laughs together. And I love a good scare just as much.',
-        'Voice acting is a passion of its own. Here the voice carries everything: no stage, no body, just sound, and yet someone should be drawn right into a story. That kind of creativity genuinely excites me.',
-        'When I’m not on stage, you’ll find me outdoors in nature, with animals or with the people who matter most to me. I’m open, warm-hearted and ready for new roles, ensembles and ways of working.',
+        'I’m Majdon Charlotte Löhr, an actress and through and through a creature of the stage. In August 2026 I complete my training at the Freie Schauspielschule Hamburg, where I have already gathered valuable stage experience on the boards of the Junges Theater Hamburg. Alongside this, I had the chance to stand in front of the camera as a lead and supporting actress in student short-film projects for the NDR. My first engagement then takes me — with some fifty to sixty performances — to the Neues Theater Hannover and the Komödie am Altstadtmarkt in Braunschweig. Before that, I can be seen at the Schauspielschultreffen 2026 at the Hamburger Kammerspiele.',
+        'My passion for music and art developed early. As a child I played various instruments and eventually found my way to theatre at the Waldorf school. It was there that I realised my place is on the stage — that I want to make people laugh, entertain them and move them with my characters. With that wish, I decided to learn the craft of acting in Hamburg.',
+        'I grew up on a small farm in Saxony-Anhalt, among sheep, chickens and dogs. That closeness to nature still shapes me today. When I’m not on stage, I watch birds, identify plants along the wayside and love discovering the small things in life. At the same time, I’m a very active person and have kept fit for three years now with regular boxing training.',
+        'Comedy brings me particular joy. The precise timing, the courage to exaggerate and the connection with the audience are what thrill me most here. Beyond that, singing is an important part of my creative work, and in future I’d love to contribute to projects in voice acting too. I’m open, curious and looking forward to discovering new roles, working with different ensembles and getting to know a range of artistic approaches.',
       ],
     },
     work: {
@@ -242,6 +248,10 @@ export const ui = {
       skillsHeading: 'Special Skills',
       creditsHeading: 'Engagements & Productions',
       exportPdf: 'Download Casting Sheet',
+      castingBio: [
+        'I’m Majdon Charlotte Löhr, an emerging actress from Hamburg. In August 2026 I complete my training at the Freie Schauspielschule Hamburg. During my training I have already gathered stage experience at the Junges Theater Hamburg and appeared in front of the camera as a lead and supporting actress in student short-film projects for the NDR.',
+        'In 2026 I can be seen at the Schauspielschultreffen at the Hamburger Kammerspiele in Federico García Lorca’s “The House of Bernarda Alba”. My first engagement then takes me — with some fifty to sixty performances — to the Neues Theater Hannover and the Komödie am Altstadtmarkt in Braunschweig.',
+      ],
     },
     galleryPage: {
       metaTitle: 'Gallery · Majdon Löhr · Actress',
@@ -252,7 +262,7 @@ export const ui = {
       backHome: 'Back to home',
     },
     footer: {
-      tagline: 'Actress · Stage · Voice Acting',
+      tagline: 'Actress · Voice Artist',
       basedIn: 'Braunschweig & Hamburg',
       rights: 'All rights reserved.',
       backToTop: 'Back to top',

@@ -128,7 +128,8 @@
   #vita-intro,
   #engagements,
   .vita-export-wrap,
-  .vita-back-link {
+  .vita-back-link,
+  .vita-screen-bio {
     display: none !important;
   }
 

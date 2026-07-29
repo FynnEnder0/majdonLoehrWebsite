@@ -5,8 +5,7 @@
 export const site = {
   name: 'Majdon Löhr',
   url: 'https://www.majdonloehr.de',
-  // TODO: echte Kontakt-E-Mail eintragen
-  email: 'maj.loehr17@gmail.com',
+  email: 'majdonloehr@gmx.de',
   // Drittanbieter-Formular (Formspree/Web3Forms) — via .env überschreibbar
   formEndpoint: import.meta.env.PUBLIC_FORM_ENDPOINT ?? '',
   // Nur für Web3Forms nötig (Formspree braucht keinen Key)

@@ -68,7 +68,7 @@ const collage = [c1, c2, c3, c4, c5, c6].map((src) => ({ src, alt: t.meta.ogAlt 
     <div class="print-header">
       <div class="print-header-text">
         <div class="print-name">{site.name}</div>
-        <div class="print-role">{lang === 'de' ? site.jobTitle.de : site.jobTitle.en} · {lang === 'de' ? 'Bühne · Synchron' : 'Stage · Voice Acting'}</div>
+        <div class="print-role">{lang === 'de' ? site.jobTitle.de : site.jobTitle.en} · {lang === 'de' ? 'Sprecherin' : 'Voice Artist'}</div>
         <div class="print-contact">
           {new URL(site.url).hostname}<br />
           {site.email}
@@ -88,12 +88,23 @@ const collage = [c1, c2, c3, c4, c5, c6].map((src) => ({ src, alt: t.meta.ogAlt 
   <Section class="bg-wing-shadow/20">
     <div class="grid gap-14 lg:grid-cols-[minmax(0,1fr)_22rem] lg:gap-20">
       <MotionReveal client:visible>
-        <div class="max-w-prose-col space-y-6">
-          {
-            t.about.body.map((para) => (
-              <p class="font-body text-2xl leading-relaxed text-warm-ash">{para}</p>
-            ))
-          }
+        <div class="max-w-prose-col">
+          {/* Bildschirm: ausführlicher Über-mich-Text */}
+          <div class="vita-screen-bio space-y-6">
+            {
+              t.about.body.map((para) => (
+                <p class="font-body text-2xl leading-relaxed text-warm-ash">{para}</p>
+              ))
+            }
+          </div>
+          {/* Casting-Sheet (Print): kompakter Vita-Text */}
+          <div class="print-only hidden space-y-4">
+            {
+              t.vita.castingBio.map((para) => (
+                <p class="font-body text-2xl leading-relaxed text-warm-ash">{para}</p>
+              ))
+            }
+          </div>
         </div>
       </MotionReveal>
 

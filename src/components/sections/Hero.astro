@@ -55,9 +55,14 @@ const t = useTranslations(lang);
         </span>
       </h1>
 
-      <p class="mt-6 font-body text-2xl italic text-warm-ash md:text-3xl">
-        {t.hero.tagline}
-      </p>
+      <figure class="mt-6">
+        <blockquote class="font-body text-2xl italic text-warm-ash md:text-3xl">
+          {t.hero.tagline}
+        </blockquote>
+        <figcaption class="mt-2 font-mono text-sm uppercase tracking-[0.14em] text-dusk-label">
+          {t.hero.taglineSource}
+        </figcaption>
+      </figure>
 
       <div class="mt-10 grid gap-8 sm:grid-cols-[1fr_auto] sm:items-end">
         <p class="max-w-prose-col font-body text-2xl leading-relaxed text-warm-ash">

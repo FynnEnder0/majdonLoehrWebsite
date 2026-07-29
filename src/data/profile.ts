@@ -18,8 +18,8 @@ export const castingFacts: Fact[] = [
   { label: { de: 'Konfektion', en: 'Clothing size' }, value: { de: 'XS / S', en: 'XS / S' } },
   { label: { de: 'Schuhgröße', en: 'Shoe size' }, value: { de: '37', en: '37 (EU)' } },
   { label: { de: 'Stimmlage', en: 'Voice type' }, value: { de: 'Sopran', en: 'Soprano' } },
-  { label: { de: 'Sprachen', en: 'Languages' }, value: { de: 'Deutsch (Muttersprache), Englisch (Bühne)', en: 'German (native), English (stage)' } },
-  { label: { de: 'Führerschein', en: 'Driving licence' }, value: { de: 'Klasse B + Motorrad + Trecker', en: 'Class B + motorcycle + tractor' } },
+  { label: { de: 'Sprachen', en: 'Languages' }, value: { de: 'Deutsch (Muttersprache), Englisch (sehr gut), Französisch (Grundkenntnisse)', en: 'German (native), English (very good), French (basics)' } },
+  { label: { de: 'Führerschein', en: 'Driving licence' }, value: { de: 'Klasse B + Motorrad (A2) + Trecker', en: 'Class B + motorcycle (A2) + tractor' } },
   { label: { de: 'Fahrzeug', en: 'Vehicle' }, value: { de: 'Eigenes Auto', en: 'Own car' } },
   { label: { de: 'Schwimmen', en: 'Swimming' }, value: { de: 'Ja, gut', en: 'Yes, strong' } },
 ];
@@ -33,6 +33,9 @@ export const skillGroups: SkillGroup[] = [
       { de: 'Gesang', en: 'Singing' },
       { de: 'Klavier', en: 'Piano' },
       { de: 'Akkordeon', en: 'Accordion' },
+      { de: 'Gitarre (Grundkenntnisse)', en: 'Guitar (basics)' },
+      { de: 'Mundharmonika (Grundkenntnisse)', en: 'Harmonica (basics)' },
+      { de: 'Flöte (Grundkenntnisse)', en: 'Flute (basics)' },
     ],
   },
   {
