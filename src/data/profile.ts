@@ -51,9 +51,7 @@ export const skillGroups: SkillGroup[] = [
     title: { de: 'Sprache & Stimme', en: 'Speech & Voice' },
     items: [
       { de: 'Synchronsprechen', en: 'Voice / dubbing' },
-      { de: 'Dialekt: Bayerisch', en: 'Dialect: Bavarian' },
       { de: 'Dialekt: Sächsisch', en: 'Dialect: Saxon' },
-      { de: 'Dialekt: Berlinerisch', en: 'Dialect: Berlin' },
     ],
   },
 ];
